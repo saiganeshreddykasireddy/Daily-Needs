@@ -26,7 +26,7 @@ export class AppTopbar extends Component {
                     <button className="p-link">
                         <span className="layout-topbar-item-text">Events</span>
                         <span className="layout-topbar-icon pi pi-calendar"/>
-                        <span className="layout-topbar-badge">5</span>
+                        {/* <span className="layout-topbar-badge">5</span> */}
                     </button>
                     <button className="p-link">
                         <span className="layout-topbar-item-text">Settings</span>

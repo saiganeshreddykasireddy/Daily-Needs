@@ -1,0 +1,93 @@
+.datatable_water_Requests {
+  .p-datatable {
+    .p-datatable-header {
+      .table-header {
+        display: flex;
+        align-items: center;
+        .left_container {
+          display: flex;
+          justify-content: flex-start;
+          .p-button-success.p-mr-2.p-button-text-icon-left {
+            margin-right: 10px;
+        }
+        }
+        .Right_container {
+          display: flex;
+          justify-content: flex-end;
+          input.p-inputtext.p-component {
+            width: 175px;
+            font-size: 12px;
+            padding: 0.329em;
+          }
+          .p-inputtext:enabled:focus {
+            border-color: none;
+            box-shadow: none;
+          }
+          i.pi.pi-search {
+            position: relative;
+            font-size: 1.15em;
+            right: 1.3em;
+            top: 2px;
+          }
+        }
+      }
+    }
+    .p-datatable-tbody{
+        .p-datatable-row{
+            td{
+                button.p-row-editor-init.p-link {
+                    width: 2.1em;
+                    height: 2.1em;
+                    background-color: #628a15;
+                    border: 1px solid #628a15;
+                    color: white;
+                    padding: 3px;
+                    font-size: 13px;
+                }
+                .p-button-rounded {
+                    border-radius: 4px;
+                    margin-right: 5px;
+                }
+               
+                .delete_icon{
+                    background-color:#e6154f ;
+                    border: 1px solid #e6154f;
+                    width: 2em;
+                    height: 2em;
+                }
+                .p-row-editor-save.p-link ,.p-row-editor-cancel.p-link {
+                    width: 1.5em;
+                    height: 1.5em;
+                    font-size: 14px;
+                    margin-right: 5px;
+                    color: white;
+                    padding-top: 1px;
+                }
+                .p-row-editor-save.p-link{
+                    background-color: #08b17a;
+                }
+                .p-row-editor-cancel.p-link{
+                    background-color: #ec82d1;
+                }
+            }
+        }
+    }
+  }
+
+  .product-image {
+    width: 100px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .p-dialog .product-image {
+    width: 150px;
+    margin: 0 auto 2rem auto;
+    display: block;
+  }
+
+  .confirmation-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

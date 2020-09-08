@@ -51,14 +51,12 @@ class AppSubmenu extends Component {
 
 	renderLinkContent(item) {
 		let submenuIcon = item.items && <i className="pi pi-fw pi-angle-down menuitem-toggle-icon"></i>;
-		let badge = item.badge && <span className="menuitem-badge">{item.badge}</span>;
 
 		return (
 			<React.Fragment>
 				<i className={item.icon}></i>
 				<span>{item.label}</span>
 				{submenuIcon}
-				{badge}
 			</React.Fragment>
 		);
 	}
