@@ -8,6 +8,8 @@ import { Route } from 'react-router-dom';
 import { Dashboard } from './components/Dashboard';
 import WaterRequest from "./components/WaterRequest";
 import { ChartsDemo } from './components/ChartsDemo';
+import {getwaterRequests} from "./actions/action";
+import { connect } from 'react-redux'
 
 // import 'primereact/resources/themes/nova-light/theme.css';
 // import 'primereact/resources/primereact.min.css';
@@ -39,7 +41,9 @@ class App extends Component {
         this.onMenuItemClick = this.onMenuItemClick.bind(this);
         this.createMenu();
     }
-
+componentDidMount(){
+this.props.dispatch(getwaterRequests());
+}
     onWrapperClick(event) {
         if (!this.menuClick) {
             this.setState({
@@ -181,4 +185,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default connect(null)(App);

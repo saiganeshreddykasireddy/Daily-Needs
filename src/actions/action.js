@@ -26,7 +26,7 @@ export const editRequests = (Flat) => {
 }
 
 
-export const deleteWaterRequests = (Flat) => {
+export const deleteWaterRequest = (Flat) => {
   console.log('in deleteEmployee ', Flat);
   return (dispatch) => {
     dispatch({
@@ -38,14 +38,12 @@ export const deleteWaterRequests = (Flat) => {
   }
 }
 
-export const addEmployee = (name) => {
-  for (let key in name) {
-    alert(key + ":" + name[key]);
-  }
+export const addWaterRequest = (Flat) => {
+ 
   return (dispatch) => {
     dispatch({
       type: "ADD_WATER_REQUESTS",
-      payload: name
+      payload: Flat
     });
   }
 }

@@ -1,5 +1,12 @@
 .datatable_water_Requests {
   .p-datatable {
+    .p-inputtext:enabled:focus {
+        border: 1px solid #a6a6a6;
+        box-shadow: none;
+      }
+      .p-button:enabled:focus {
+        box-shadow: none;
+      }
     .p-datatable-header {
       .table-header {
         display: flex;
@@ -19,10 +26,7 @@
             font-size: 12px;
             padding: 0.329em;
           }
-          .p-inputtext:enabled:focus {
-            border-color: none;
-            box-shadow: none;
-          }
+        
           i.pi.pi-search {
             position: relative;
             font-size: 1.15em;
@@ -48,7 +52,10 @@
                     border-radius: 4px;
                     margin-right: 5px;
                 }
-               
+               .delivery_icon{
+                width: 2em;
+                height: 2em;
+               }
                 .delete_icon{
                     background-color:#e6154f ;
                     border: 1px solid #e6154f;
@@ -69,25 +76,12 @@
                 .p-row-editor-cancel.p-link{
                     background-color: #ec82d1;
                 }
+                input.p-inputtext.p-component {
+                    font-size: 12px;
+                    padding: 0.38em;
+                }
             }
         }
     }
-  }
-
-  .product-image {
-    width: 100px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  }
-
-  .p-dialog .product-image {
-    width: 150px;
-    margin: 0 auto 2rem auto;
-    display: block;
-  }
-
-  .confirmation-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }

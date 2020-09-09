@@ -31,17 +31,15 @@ const initialState = {
        
   
       case 'DELETE_WATER_REQUESTS':
-        const updatedEmployees = state.Requests.filter(emp => emp.id !== action.payload.empId);
-        console.log(updatedEmployees)
+        const updatedRequests = state.Requests.filter(rowData => rowData.Flat !== action.payload.Flat);
         return Object.assign({
           ...state,
-          Requests: updatedEmployees
+          Requests: updatedRequests
         });
   
       case 'ADD_WATER_REQUESTS':
-        // return state.concat([action.data]);
-        const addedEmployees = state.Requests.concat(emp => emp.id !== action.payload.name);
-        console.log(addedEmployees)
+        const addedEmployees = state.Requests.concat(rowData => rowData.Flat !== action.payload.Flat);
+        console.log(action.payload)
         return Object.assign({
           ...state,
           Requests: addedEmployees
