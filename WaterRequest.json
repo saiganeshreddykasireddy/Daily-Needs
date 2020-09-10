@@ -15,7 +15,80 @@
     {
         "Flat":"C 1208",
         "Brand":"Bisleri",
-        "Quantity":2        
+        "Quantity":2  ,      
+        "Price":20
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":20
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":20
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":20
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":20
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":20
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Bisleri",
+        "Quantity":2 ,       
+        "Price":20
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":20
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":20
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":20
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":20
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":20
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Bisleri",
+        "Quantity":2  ,      
+        "Price":20
 
     },
     {

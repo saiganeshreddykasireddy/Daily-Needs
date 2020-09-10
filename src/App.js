@@ -10,7 +10,8 @@ import WaterRequest from "./components/WaterRequest";
 import { ChartsDemo } from './components/ChartsDemo';
 import {getwaterRequests} from "./actions/action";
 import { connect } from 'react-redux'
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // import 'primereact/resources/themes/nova-light/theme.css';
 // import 'primereact/resources/primereact.min.css';
 // import 'primeicons/primeicons.css';
@@ -176,6 +177,7 @@ this.props.dispatch(getwaterRequests());
 
 
                 </div>
+                <ToastContainer className="toastClass" autoClose={3000} />
 
                 {/* <AppFooter /> */}
 

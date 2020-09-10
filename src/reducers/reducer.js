@@ -19,7 +19,7 @@ const initialState = {
         const udpatedRecords = [];
         for (let index = 0; index < state.Requests.length; index++) {
           const record = state.Requests[index];
-          record.editMode = (action.payload.empId === record.id);
+          record.editMode = (action.payload.Flat === record.Flat);
           udpatedRecords.push(record);
         }
         console.log(' EDIT_EMPLOYEE ', udpatedRecords);
