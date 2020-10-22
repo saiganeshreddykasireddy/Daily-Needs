@@ -27,7 +27,7 @@ const waterPriceList =[
 {"Brand":"Bailey","Price": 50}
 
 ];
-class WaterRequest extends Component {
+class ItemrequestDataTable extends Component {
 
 
     constructor(props) {
@@ -47,25 +47,34 @@ class WaterRequest extends Component {
         this.actionBodyTemplate = this.actionBodyTemplate.bind(this);
         this.deleteWaterRequest = this.deleteWaterRequest.bind(this);
         this.exportCSV = this.exportCSV.bind(this);
-        this.onInputChange = this.onInputChange.bind(this);
     }
 
-    componentDidMount() {
-        console.log(this.props.Requests);
+    componentDidMount(props) {
+        let {Requests,requestsType} = this.props;
+        console.log(requestsType);
+        let finalData = Requests.requestsType;
             this.setState({
-            waterrequests: this.props.Requests.waterRequests,
+            ItemRequests: Requests.requestsType,
             FlatsList: FlatsList,
-            brandList:brandList,
+            brandList:this.props.brandList,
+        })
+    }
+    componentWillReceiveProps(){
+        console.log(this.props);
+        this.setState({
+            ItemRequests: this.props.Requests,
+            FlatsList: FlatsList,
+            brandList:this.props.brandList,
         })
     }
 
     deleteWaterRequest(rowData) {
-        let waterrequests = [...this.state.waterrequests];
-        let Index = _.findIndex(waterrequests, rowData);
-        waterrequests.splice(Index, 1);
+        let ItemRequests = [...this.state.ItemRequests];
+        let Index = _.findIndex(ItemRequests, rowData);
+        ItemRequests.splice(Index, 1);
         this.props.dispatch(deleteWaterRequest(rowData.Flat));
         this.setState({
-            waterrequests: waterrequests
+            ItemRequests: ItemRequests
         });
     }
     addNewRequest() {
@@ -76,23 +85,18 @@ class WaterRequest extends Component {
             Price: null,
             isNewlyadded:true
         };
-        let updatedRequests = [...this.state.waterrequests];
+        let updatedRequests = [...this.state.ItemRequests];
         updatedRequests.push(newRequest);
         this.props.dispatch(addWaterRequest(newRequest));
         this.setState({
-            waterrequests: updatedRequests,
+            ItemRequests: updatedRequests,
         });
     }
 
     exportCSV() {
         this.dt.exportCSV();
     }
-    onInputChange(e, name) {
-
-    }
-
-    onInputNumberChange(e, name) {
-    }
+ 
     waterDelivered = (rowData) => {
         toast.success(` water for ${rowData.Flat} delivered successfully`);
     }
@@ -125,13 +129,13 @@ class WaterRequest extends Component {
         this.dt.exportCSV();
     }
     onRowEditInit(event) {
-        this.originalRows[event.index] = { ...this.state.waterrequests[event.index] };
+        this.originalRows[event.index] = { ...this.state.ItemRequests[event.index] };
     }
     onRowEditCancel(event) {
-        let products = [...this.state.waterrequests];
+        let products = [...this.state.ItemRequests];
         products[event.index] = this.originalRows[event.index];
         delete this.originalRows[event.index];
-        this.setState({ waterrequests: products });
+        this.setState({ ItemRequests: products });
     }
     onEditorValueChange(productKey, props, value) {
         let updatedProducts = [...props.value];
@@ -174,39 +178,40 @@ class WaterRequest extends Component {
         return this.inputTextEditor(productKey, props, "Price");
     }
     onRowReorder(e) {
-        this.setState({ waterrequests: e.value });
+        this.setState({ ItemRequests: e.value });
     }
     getToast = (waterStatus)=>{
         if( waterStatus.currentStatus <10){
             return  toast.error(`${waterStatus.Brand} is getting out of stock`)
         };
     }
-    // saveWaterRequests = () =>{
-    //     let updatedRequests = [...this.state.waterrequests];
+    // saveItemRequests = () =>{
+    //     let updatedRequests = [...this.state.ItemRequests];
     //     this.props.dispatch(updateRequest(updatedRequests))
     // }
     render() {
-        const data = _.groupBy(this.props.Requests, "Brand") || [];
-        let finalData = [];
+        console.log(this.props);
+        // const data = _.groupBy(this.props.Requests, "Brand") || [];
+        // let finalData = [];
     
-        let totalCount = 0;
-        waterstockData.map((_items) => {
-          let firstKey = _items[0];
-          if (Object.keys(data).indexOf(firstKey) >= 0) {
-            totalCount += data[firstKey].length;
-            finalData.push({ currentStatus: _items[1]- data[firstKey].length,Brand: _items[0], count: data[firstKey].length });
+        // let totalCount = 0;
+        // waterstockData.map((_items) => {
+        //   let firstKey = _items[0];
+        //   if (Object.keys(data).indexOf(firstKey) >= 0) {
+        //     totalCount += data[firstKey].length;
+        //     finalData.push({ currentStatus: _items[1]- data[firstKey].length,Brand: _items[0], count: data[firstKey].length });
     
-          } else {
-            finalData.push({currentStatus: _items[1],
-                 Brand: _items[0], count: 0 });
-          }
-        });
+        //   } else {
+        //     finalData.push({currentStatus: _items[1],
+        //          Brand: _items[0], count: 0 });
+        //   }
+        // });
         const header = (
             <div className="table-header">
                 <div className="p-col-6 left_container">
                     <Button label="Add" icon="pi pi-plus" className="p-button-success p-mr-2" onClick={this.addNewRequest} />
                     <Button type="button" icon="pi pi-external-link" label="Print" onClick={this.exportCSV}></Button>
-                    {/* <Button type="button" icon="pi pi-check p-mr-2" label="Save" onClick={this.saveWaterRequests}></Button> */}
+                    {/* <Button type="button" icon="pi pi-check p-mr-2" label="Save" onClick={this.saveItemRequests}></Button> */}
 
                 </div>
                 <div className="p-col-6 Right_container">
@@ -220,7 +225,7 @@ class WaterRequest extends Component {
        
         return (
             <div className="datatable_water_Requests">
-                <div className="water_status_wrapper">
+                {/* <div className="water_status_wrapper">
                 {
                     finalData.map((_count)=>{
                         let classname= _count.currentStatus < 10 ? "gettingoutofstock" :"";
@@ -233,9 +238,9 @@ class WaterRequest extends Component {
                        );
                     })
                 }
-                </div>
+                </div> */}
                 <div className="card">
-                    <DataTable ref={(el) => this.dt = el} value={this.state.waterrequests}
+                    <DataTable ref={(el) => this.dt = el} value={this.state.ItemRequests}
                         dataKey="id" paginator rows={13}
                         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
                         globalFilter={this.state.globalFilter}
@@ -265,7 +270,7 @@ const mapStateToProps = ({
 }) => ({
     Requests
 })
-export default connect(mapStateToProps)(WaterRequest);
+export default connect(mapStateToProps)(ItemrequestDataTable);
 
 
 

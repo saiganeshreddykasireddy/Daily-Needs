@@ -10,6 +10,12 @@ const initialState = {
           ...state,
           Requests: action.payload
         };
+        case 'POST_WATER_REQUESTS':
+        console.log(action.type);
+        return {
+          ...state,
+          Requests: action.payload
+        };
   
   
       

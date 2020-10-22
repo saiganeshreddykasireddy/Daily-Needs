@@ -30,6 +30,8 @@
         "react-scripts": "3.0.1",
         "react-toastify": "^6.0.8",
         "react-transition-group": "^2.9.0",
+        "redux": "^4.0.5",
+        "redux-thunk": "^2.3.0",
         "toast": "^0.2.10"
     },
     "scripts": {
