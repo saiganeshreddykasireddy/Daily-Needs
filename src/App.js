@@ -8,6 +8,7 @@ import { Route } from 'react-router-dom';
 import { Dashboard } from './components/Dashboard';
 import PaperRequest from "./components/PaperRequest";
 import WaterRequest from "./components/WaterRequest";
+import ItemsList from "./components/ItemsList";
 
 import { ChartsDemo } from './components/ChartsDemo';
 import {getwaterRequests} from "./actions/action";
@@ -99,7 +100,10 @@ this.props.dispatch(getwaterRequests());
     createMenu() {
         this.menu = [
             {
-                label: 'Dashboard', icon: 'pi pi-fw pi-home', command: () => { window.location = '/Dashboard' },
+                label: 'Dashboard', icon: 'pi pi-fw pi-home', to:'/'
+            },
+            {
+                label: 'Items List', icon: 'pi pi-fw pi-home', to:'/ItemsList'
             },
             {
                 label: 'Menu Colors', icon: 'pi pi-fw pi-align-left',
@@ -173,7 +177,9 @@ this.props.dispatch(getwaterRequests());
                 </div>
 
                 <div className="layout-main">
-                    <Route path="/Dashboard" exact component={Dashboard} />
+                    <Route path="/" exact component={Dashboard} />
+                    <Route path="/ItemsList" component={ItemsList} />
+
                     <Route path="/WaterRequest" component={WaterRequest} />
                     <Route path="/PaperRequest" component={PaperRequest} />
 
