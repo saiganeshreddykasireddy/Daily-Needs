@@ -1,3 +1,5 @@
+import _ from "lodash";
+
 const initialState = {
     Requests: [],
   }
@@ -5,13 +7,11 @@ const initialState = {
   export default function reducers(state = initialState, action) {
     switch (action.type) {
       case 'FETCH_WATER_REQUESTS':
-        console.log(action.type);
         return {
           ...state,
           Requests: action.payload
         };
         case 'POST_WATER_REQUESTS':
-        console.log(action.type);
         return {
           ...state,
           Requests: action.payload
@@ -23,8 +23,12 @@ const initialState = {
   
       case 'EDIT_WATER_REQUESTS':
         const udpatedRecords = [];
-        for (let index = 0; index < state.Requests.length; index++) {
-          const record = state.Requests[index];
+        let reqType= action.payload.requestsType;
+        console.log(state.Requests,reqType);
+        // let finalData =Object.entries(state.Requests);
+
+        for (let index = 0; index < state.Requests.reqType.length; index++) {
+          const record = state.Requests.reqType[index];
           record.editMode = (action.payload.Flat === record.Flat);
           udpatedRecords.push(record);
         }

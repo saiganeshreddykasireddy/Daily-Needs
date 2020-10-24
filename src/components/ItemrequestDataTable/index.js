@@ -28,15 +28,12 @@ const waterPriceList =[
 
 ];
 class ItemrequestDataTable extends Component {
-
-
     constructor(props) {
         super(props);
         this.state = {
             globalFilter: null,
             FlatsList: [],
             suggestedFlats: null
-
         };
         this.originalRows = {};
         this.onRowEditInit = this.onRowEditInit.bind(this);
@@ -48,26 +45,23 @@ class ItemrequestDataTable extends Component {
         this.deleteWaterRequest = this.deleteWaterRequest.bind(this);
         this.exportCSV = this.exportCSV.bind(this);
     }
-
     componentDidMount(props) {
-        let {Requests,requestsType} = this.props;
-        console.log(requestsType);
-        let finalData = Requests.requestsType;
+        let {requests,requestsType,ItemPriceList,brandList} = this.props;
             this.setState({
-            ItemRequests: Requests.requestsType,
+            ItemRequests: requests,
             FlatsList: FlatsList,
-            brandList:this.props.brandList,
+            brandList:brandList,
+            ItemPriceList:ItemPriceList,
+            requestsType:requestsType
         })
     }
     componentWillReceiveProps(){
-        console.log(this.props);
         this.setState({
-            ItemRequests: this.props.Requests,
+            ItemRequests: this.props.requests,
             FlatsList: FlatsList,
             brandList:this.props.brandList,
         })
     }
-
     deleteWaterRequest(rowData) {
         let ItemRequests = [...this.state.ItemRequests];
         let Index = _.findIndex(ItemRequests, rowData);
@@ -92,7 +86,6 @@ class ItemrequestDataTable extends Component {
             ItemRequests: updatedRequests,
         });
     }
-
     exportCSV() {
         this.dt.exportCSV();
     }
@@ -138,10 +131,11 @@ class ItemrequestDataTable extends Component {
         this.setState({ ItemRequests: products });
     }
     onEditorValueChange(productKey, props, value) {
+        let {requestsType=""} = this.props;
         let updatedProducts = [...props.value];
         updatedProducts[props.rowIndex][props.field] = value;
         this.setState({ [`${productKey}`]: updatedProducts });
-        this.props.dispatch(editRequests(updatedProducts));
+        this.props.dispatch(editRequests(updatedProducts,requestsType));
     }
     inputTextEditor(productKey, props, field) {
         if(field !="Price"){
@@ -149,7 +143,8 @@ class ItemrequestDataTable extends Component {
         }
         else{
             let price;
-            let _value = _.filter(waterPriceList,{'Brand':props.rowData.Brand});
+            let {ItemPriceList} = this.state;
+            let _value = _.filter(ItemPriceList,{'Brand':props.rowData.Brand});
             if(!props.rowData.isNewlyadded){
                 props.rowData[field] = _value[0].Price * props.rowData.Quantity || null;
             }
@@ -158,8 +153,6 @@ class ItemrequestDataTable extends Component {
                     props.rowData[field] = _value[0].Price * props.rowData.Quantity || null;;
 
                 }
-
-
             }
           
             return <input type ="number" className="price-input" value={props.rowData[field]  } />
@@ -190,7 +183,6 @@ class ItemrequestDataTable extends Component {
     //     this.props.dispatch(updateRequest(updatedRequests))
     // }
     render() {
-        console.log(this.props);
         // const data = _.groupBy(this.props.Requests, "Brand") || [];
         // let finalData = [];
     
@@ -211,8 +203,6 @@ class ItemrequestDataTable extends Component {
                 <div className="p-col-6 left_container">
                     <Button label="Add" icon="pi pi-plus" className="p-button-success p-mr-2" onClick={this.addNewRequest} />
                     <Button type="button" icon="pi pi-external-link" label="Print" onClick={this.exportCSV}></Button>
-                    {/* <Button type="button" icon="pi pi-check p-mr-2" label="Save" onClick={this.saveItemRequests}></Button> */}
-
                 </div>
                 <div className="p-col-6 Right_container">
                     <span className="p-input-icon-left">

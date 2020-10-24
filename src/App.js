@@ -7,6 +7,8 @@ import { AppMenu } from './AppMenu';
 import { Route } from 'react-router-dom';
 import { Dashboard } from './components/Dashboard';
 import PaperRequest from "./components/PaperRequest";
+import WaterRequest from "./components/WaterRequest";
+
 import { ChartsDemo } from './components/ChartsDemo';
 import {getwaterRequests} from "./actions/action";
 import { connect } from 'react-redux'
@@ -97,7 +99,7 @@ this.props.dispatch(getwaterRequests());
     createMenu() {
         this.menu = [
             {
-                label: 'Dashboard', icon: 'pi pi-fw pi-home', command: () => { window.location = '#/' },
+                label: 'Dashboard', icon: 'pi pi-fw pi-home', command: () => { window.location = '/Dashboard' },
             },
             {
                 label: 'Menu Colors', icon: 'pi pi-fw pi-align-left',
@@ -110,7 +112,7 @@ this.props.dispatch(getwaterRequests());
                 label: 'Item Requests', icon: 'pi pi-fw pi-globe', badge: '9',
                 items: [
                     { label: 'PaperRequest', icon: 'pi pi-fw pi-chart-bar', to: '/PaperRequest' },
-                    { label: 'Charts', icon: 'pi pi-fw pi-chart-bar', to: '/charts' },
+                    { label: 'WaterRequest', icon: 'pi pi-fw pi-chart-bar', to: '/WaterRequest' },
                 ]
             },
 
@@ -172,7 +174,7 @@ this.props.dispatch(getwaterRequests());
 
                 <div className="layout-main">
                     <Route path="/Dashboard" exact component={Dashboard} />
-                    <Route path="/charts" component={ChartsDemo} />                  
+                    <Route path="/WaterRequest" component={WaterRequest} />
                     <Route path="/PaperRequest" component={PaperRequest} />
 
 

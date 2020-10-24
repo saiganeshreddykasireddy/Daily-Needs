@@ -1,6 +1,6 @@
 {
   "Requests":{
-      "waterRequests":[
+      "WaterRequests":[
     {
         "Flat":"A 1208",
         "Brand":"Bisleri",
@@ -19,6 +19,8 @@
         "Quantity":1  ,      
         "Price":70
 
+
+        
     },
     {
         "Flat":"D 1208",

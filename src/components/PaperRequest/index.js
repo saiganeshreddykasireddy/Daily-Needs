@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from "react";
+import {useStore,useSelector } from "react-redux";
 import ItemrequestDataTable from "../ItemrequestDataTable";
 
 import { connect } from 'react-redux'
@@ -13,41 +14,33 @@ const ItemPriceList = [
     { "Brand": "Economic Times", "Price": 10 },
     { "Brand": "The Hindu", "Price": 9 }
 ];
-class PaperRequest extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        };
-    }
-    componentDidMount() {
-        let ItemList = [];
+
+
+const PaperRequest = (props) => {
+
+    const PaperRequests = useSelector(state => {
+        let { Requests: { PaperRequests } } = state;
+        return PaperRequests;
+    });
+    const [ItemList, setItemList] = useState([]);
+    useEffect(() => {
+        let _ItemList = [];
         if (ItemPriceList && ItemPriceList.length) {
             ItemPriceList.map((_items) => {
-                ItemList.push(_items.Brand);
+                _ItemList.push(_items.Brand);
             })
         }
-        let {Requests} = this.props;
-        this.setState({
-            requests: Requests.PaperRequests,
-            brandList: ItemList,
-        })
-    }
-    render() {
-        return (
-            <div>
-                <ItemrequestDataTable key="PaperRequests" requests={this.state.requests} requestsType="PaperRequests" brandList={this.state.brandList} />
-            </div>
-        );
-    }
+        setItemList(_ItemList);
+    }, [PaperRequests]);
+    return (
+        <div>
+            <ItemrequestDataTable key="PaperRequests" requests={PaperRequests} requestsType="PaperRequests" brandList={ItemList} ItemPriceList={ItemPriceList} />
+        </div>
+    );
+
 }
-const mapStateToProps = ({
-    Requests
-}) => ({
-    Requests
-})
-export default connect(mapStateToProps)(PaperRequest);
 
-
+export default PaperRequest;
 
 
 
