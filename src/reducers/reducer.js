@@ -24,35 +24,43 @@ const initialState = {
       case 'EDIT_WATER_REQUESTS':
         const udpatedRecords = [];
         let reqType= action.payload.requestsType;
-        console.log(state.Requests,reqType);
-        // let finalData =Object.entries(state.Requests);
-
-        for (let index = 0; index < state.Requests.reqType.length; index++) {
-          const record = state.Requests.reqType[index];
-          record.editMode = (action.payload.Flat === record.Flat);
-          udpatedRecords.push(record);
+        let finaldata ;
+        for (let index = 0; index < state.Requests[reqType].length; index++) {
+          const record = state.Requests[reqType][index];
+          record.editMode = (action.payload.data[index].Flat === record.Flat);
+          state.Requests[reqType][index] = record;  
+          finaldata =  state.Requests;
         }
-        console.log(' EDIT_EMPLOYEE ', udpatedRecords);
+        console.log(' EDIT_EMPLOYEE ', finaldata);
         return Object.assign({
           ...state,
-          Requests: udpatedRecords
+          Requests: finaldata
         });
   
        
   
       case 'DELETE_WATER_REQUESTS':
-        const updatedRequests = state.Requests.filter(rowData => rowData.Flat !== action.payload.Flat);
+        let ReqType= action.payload.requestsType;
+        let updatedRequest;
+        console.log(action.payload.rowdata.Flat);
+        const _updatedRequests = state.Requests[ReqType].filter(rowData => rowData !== action.payload.rowdata);
+        state.Requests[ReqType] = _updatedRequests;
+        updatedRequest  = state.Requests;
         return Object.assign({
           ...state,
-          Requests: updatedRequests
+          Requests: updatedRequest
         });
   
+
       case 'ADD_WATER_REQUESTS':
-        const addedEmployees = state.Requests.concat(rowData => rowData.Flat !== action.payload.Flat);
-        console.log(action.payload)
-        return Object.assign({
+      const requesttype = action.payload.requestsType;
+      let updateRequests;
+        const addedRequests = state.Requests[requesttype].concat(action.payload.newdata);
+        state.Requests[requesttype] = addedRequests;
+        updateRequests  = state.Requests; 
+         return Object.assign({
           ...state,
-          Requests: addedEmployees
+          Requests: updateRequests
         });
   
       default:

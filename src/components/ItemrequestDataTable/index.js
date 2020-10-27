@@ -35,6 +35,7 @@ class ItemrequestDataTable extends Component {
             FlatsList: [],
             suggestedFlats: null
         };
+        this.datatableRef = React.createRef();
         this.originalRows = {};
         this.onRowEditInit = this.onRowEditInit.bind(this);
         this.onRowEditCancel = this.onRowEditCancel.bind(this);
@@ -63,15 +64,19 @@ class ItemrequestDataTable extends Component {
         })
     }
     deleteWaterRequest(rowData) {
+        let {requestsType=""} = this.props;
+
         let ItemRequests = [...this.state.ItemRequests];
         let Index = _.findIndex(ItemRequests, rowData);
         ItemRequests.splice(Index, 1);
-        this.props.dispatch(deleteWaterRequest(rowData.Flat));
+        this.props.dispatch(deleteWaterRequest(rowData,requestsType));
         this.setState({
             ItemRequests: ItemRequests
         });
     }
     addNewRequest() {
+        let {requestsType=""} = this.props;
+
         let newRequest = {
             Flat: "",
             Brand: "",
@@ -81,7 +86,7 @@ class ItemrequestDataTable extends Component {
         };
         let updatedRequests = [...this.state.ItemRequests];
         updatedRequests.push(newRequest);
-        this.props.dispatch(addWaterRequest(newRequest));
+        this.props.dispatch(addWaterRequest(newRequest,requestsType));
         this.setState({
             ItemRequests: updatedRequests,
         });
@@ -229,7 +234,7 @@ class ItemrequestDataTable extends Component {
                     })
                 }
                 </div> */}
-                <div className="card">
+                <div className="card" ref={this.datatableRef}>
                     <DataTable ref={(el) => this.dt = el} value={this.state.ItemRequests}
                         dataKey="id" paginator rows={13}
                         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
