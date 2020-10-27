@@ -54,12 +54,12 @@ export const getwaterRequests = () => {
 //   };
 // };
 
-export const editRequests = (Flat,requestsType) => {
+export const editRequests = (data,requestsType) => {
   return (dispatch) => {
     dispatch({
       type: "EDIT_WATER_REQUESTS",
       payload: {
-        Flat,
+        data,
         requestsType
       }
     })
@@ -67,23 +67,28 @@ export const editRequests = (Flat,requestsType) => {
 }
 
 
-export const deleteWaterRequest = (Flat) => {
+export const deleteWaterRequest = (rowdata,requestsType) => {
+  console.log(rowdata,requestsType)
   return (dispatch) => {
     dispatch({
       type: "DELETE_WATER_REQUESTS",
       payload: {
-        Flat
+        rowdata,
+        requestsType
       }
     });
   }
 }
 
-export const addWaterRequest = (Flat) => {
- 
+export const addWaterRequest = (newdata,requestsType) => {
+ console.log(newdata,"<-------action.js");
   return (dispatch) => {
     dispatch({
       type: "ADD_WATER_REQUESTS",
-      payload: Flat
+      payload: {
+        newdata,
+        requestsType
+      }
     });
   }
 }
