@@ -17,10 +17,6 @@ const initialState = {
           Requests: action.payload
         };
   
-  
-      
-  
-  
       case 'EDIT_WATER_REQUESTS':
         const udpatedRecords = [];
         let reqType= action.payload.requestsType;

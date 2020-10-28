@@ -8,6 +8,7 @@ import { Route } from 'react-router-dom';
 import { Dashboard } from './components/Dashboard';
 import PaperRequest from "./components/PaperRequest";
 import WaterRequest from "./components/WaterRequest";
+import MilkRequest from "./components/MilkRequest";
 import ItemsList from "./components/ItemsList";
 import Advertisements from "./components/Advertisements";
 
@@ -135,6 +136,8 @@ this.props.dispatch(getwaterRequests());
                 items: [
                     { label: 'PaperRequest', icon: 'pi  pi-shopping-cart', to: '/PaperRequest' },
                     { label: 'WaterRequest', icon: 'pi  pi-shopping-cart', to: '/WaterRequest' },
+                    { label: 'MilkRequest', icon: 'pi  pi-shopping-cart', to: '/MilkRequest' },
+
                 ]
             },
             {
@@ -205,6 +208,7 @@ this.props.dispatch(getwaterRequests());
 
                     <Route path="/WaterRequest" component={WaterRequest} />
                     <Route path="/PaperRequest" component={PaperRequest} />
+                    <Route path="/MilkRequest" component={MilkRequest} />
 
 
                 </div>

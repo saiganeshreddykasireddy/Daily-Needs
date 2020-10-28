@@ -1,4 +1,55 @@
 .datatable_water_Requests {
+  .p-dialog-titlebar{
+    // width: 640px;
+        height: 46px;
+        border-radius: 8px 8px 0px 0px;
+        opacity: 1;
+        border:none;
+        background-color: #627484 !important;
+        border-bottom: none;    
+        color:#fcf8f8 !important;
+        border:none !important;
+    }
+    .p-dialog-titlebar-close-icon{
+      color:#fcf8f8 !important;
+    }
+    .p-link:focus {
+        box-shadow: none;
+        color:#fcf8f8 !important;
+      }
+    span.p-dialog-title{
+        float: left;
+       
+    }
+  .p-dialog-content{
+    border: none !important;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+    .p-dialog-footer{
+      display: flex;
+      justify-content: center;
+      border-radius: 0px 0px 7px 7px;
+      border: none !important;
+    .p-button{
+      width: 80px;
+      height: 30px;
+      border-radius: 2px;
+      opacity: 1;
+      padding: none !important;
+      margin: 0px 5px;
+      border: none;
+      color: #ffff;
+      font-size: 12px;
+    }
+    }
+      .nobtn{
+         background-color: #484848 !important;
+      }
+      .yesbtn{
+        background-color: #4b757c !important;
+      }
     .water_status_wrapper {
       display: flex;
       justify-content: center;
@@ -111,8 +162,12 @@
         }
       }
       .p-datatable-tbody {
+        tr:nth-child(even) {
+          background-color:#e5e5e5;
+        }
         .p-datatable-row {
           td {
+            font-size: 12px;
             button.p-row-editor-init.p-link {
               width: 2.1em;
               height: 2.1em;

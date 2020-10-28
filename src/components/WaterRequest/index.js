@@ -12,7 +12,12 @@ import { connect } from 'react-redux'
         {"Brand":"Bailey","Price": 50}
         
         ];
-
+        const waterstockData=[
+            ["Aquapure",100], 
+            ["Bisleri",12],
+            ["Kinley",35],
+            ["Bailey",30]
+        ];
 
 const WaterRequest = (props) => {
 
@@ -32,7 +37,7 @@ const WaterRequest = (props) => {
     }, [WaterRequests]);
     return (
         <div>
-            <ItemrequestDataTable key="WaterRequests" requests={WaterRequests} requestsType="WaterRequests" brandList={ItemList} ItemPriceList={ItemPriceList} />
+            <ItemrequestDataTable key="WaterRequests" requests={WaterRequests} requestsType="WaterRequests" brandList={ItemList} ItemPriceList={ItemPriceList} waterstockData={waterstockData} />
         </div>
     );
 

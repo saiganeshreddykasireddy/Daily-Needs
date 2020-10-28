@@ -14,12 +14,7 @@ import "./style.scss";
 import _ from "lodash";
 const FlatsList = ["A123","A234"];
 const brandList =["Bisleri","Kinley","Aquapure","Bailey"];
-const waterstockData=[
-    ["Aquapure",100], 
-    ["Bisleri",25],
-    ["Kinley",35],
-    ["Bailey",30]
-];
+
 const waterPriceList =[
 {"Brand":"Aquapure","Price": 40},
 {"Brand":"Bisleri","Price": 100},
@@ -33,7 +28,8 @@ class ItemrequestDataTable extends Component {
         this.state = {
             globalFilter: null,
             FlatsList: [],
-            suggestedFlats: null
+            suggestedFlats: null,
+            deleteProductDialog:false
         };
         this.datatableRef = React.createRef();
         this.originalRows = {};
@@ -45,15 +41,17 @@ class ItemrequestDataTable extends Component {
         this.actionBodyTemplate = this.actionBodyTemplate.bind(this);
         this.deleteWaterRequest = this.deleteWaterRequest.bind(this);
         this.exportCSV = this.exportCSV.bind(this);
+        this.hideDeleteProductDialog = this.hideDeleteProductDialog.bind(this);
     }
     componentDidMount(props) {
-        let {requests,requestsType,ItemPriceList,brandList} = this.props;
+        let {requests,requestsType,ItemPriceList,brandList,waterstockData} = this.props;
             this.setState({
             ItemRequests: requests,
             FlatsList: FlatsList,
             brandList:brandList,
             ItemPriceList:ItemPriceList,
-            requestsType:requestsType
+            requestsType:requestsType,
+            waterstockData:waterstockData
         })
     }
     componentWillReceiveProps(){
@@ -63,16 +61,32 @@ class ItemrequestDataTable extends Component {
             brandList:this.props.brandList,
         })
     }
-    deleteWaterRequest(rowData) {
+    deleteWaterRequest() {
+        let{rowdata} = this.state;
         let {requestsType=""} = this.props;
 
         let ItemRequests = [...this.state.ItemRequests];
-        let Index = _.findIndex(ItemRequests, rowData);
+        let Index = _.findIndex(ItemRequests, rowdata);
         ItemRequests.splice(Index, 1);
-        this.props.dispatch(deleteWaterRequest(rowData,requestsType));
+        this.props.dispatch(deleteWaterRequest(rowdata,requestsType));
         this.setState({
-            ItemRequests: ItemRequests
+            ItemRequests: ItemRequests,
+            deleteProductDialog:false,
+            rowdata:{},
+            isrendered:true
         });
+    }
+    hideDeleteProductDialog() {
+        this.setState({ deleteProductDialog: false });
+    }
+    openDeleteDialog = (rowData)=>{
+        this.setState({ 
+            deleteProductDialog: true,
+            rowdata:rowData,
+            isrendered:true
+
+         });
+
     }
     addNewRequest() {
         let {requestsType=""} = this.props;
@@ -89,6 +103,7 @@ class ItemrequestDataTable extends Component {
         this.props.dispatch(addWaterRequest(newRequest,requestsType));
         this.setState({
             ItemRequests: updatedRequests,
+            isrendered:true
         });
     }
     exportCSV() {
@@ -116,7 +131,7 @@ class ItemrequestDataTable extends Component {
     actionBodyTemplate(rowData) {
         return (
             <>
-                <Button icon="pi pi-trash" className="p-button-rounded delete_icon" onClick={() => this.deleteWaterRequest(rowData)} />
+                <Button icon="pi pi-trash" className="p-button-rounded delete_icon" onClick={() => this.openDeleteDialog(rowData)} />
             </>
         );
     }
@@ -128,12 +143,16 @@ class ItemrequestDataTable extends Component {
     }
     onRowEditInit(event) {
         this.originalRows[event.index] = { ...this.state.ItemRequests[event.index] };
+        this.setState({
+            isrendered:true
+        })
     }
     onRowEditCancel(event) {
         let products = [...this.state.ItemRequests];
-        products[event.index] = this.originalRows[event.index];
-        delete this.originalRows[event.index];
+        // products[event.index] = this.originalRows[event.index];
+        // delete this.originalRows[event.index];
         this.setState({ ItemRequests: products });
+
     }
     onEditorValueChange(productKey, props, value) {
         let {requestsType=""} = this.props;
@@ -141,6 +160,7 @@ class ItemrequestDataTable extends Component {
         updatedProducts[props.rowIndex][props.field] = value;
         this.setState({ [`${productKey}`]: updatedProducts });
         this.props.dispatch(editRequests(updatedProducts,requestsType));
+
     }
     inputTextEditor(productKey, props, field) {
         if(field !="Price"){
@@ -162,6 +182,7 @@ class ItemrequestDataTable extends Component {
           
             return <input type ="number" className="price-input" value={props.rowData[field]  } />
         }
+
     }
     flatNameEditor = (productKey, props) => {
         return this.inputTextEditor(productKey, props, "Flat");
@@ -178,31 +199,44 @@ class ItemrequestDataTable extends Component {
     onRowReorder(e) {
         this.setState({ ItemRequests: e.value });
     }
-    getToast = (waterStatus)=>{
-        if( waterStatus.currentStatus <10){
-            return  toast.error(`${waterStatus.Brand} is getting out of stock`)
-        };
+    getToast = (_isgettingoutofstock)=>{
+            return  toast.error(`${_isgettingoutofstock} is getting out of stock`)
     }
     // saveItemRequests = () =>{
     //     let updatedRequests = [...this.state.ItemRequests];
     //     this.props.dispatch(updateRequest(updatedRequests))
     // }
     render() {
-        // const data = _.groupBy(this.props.Requests, "Brand") || [];
-        // let finalData = [];
+        let {requests={},requestsType="",waterstockData=[]} = this.props;
+        let finalData = [];
     
-        // let totalCount = 0;
-        // waterstockData.map((_items) => {
-        //   let firstKey = _items[0];
-        //   if (Object.keys(data).indexOf(firstKey) >= 0) {
-        //     totalCount += data[firstKey].length;
-        //     finalData.push({ currentStatus: _items[1]- data[firstKey].length,Brand: _items[0], count: data[firstKey].length });
-    
-        //   } else {
-        //     finalData.push({currentStatus: _items[1],
-        //          Brand: _items[0], count: 0 });
-        //   }
-        // });
+        let totalCount = 0;
+        if(requestsType = "WaterRequests"){
+            const data = _.groupBy(requests, "Brand") || [];
+
+            waterstockData.map((_items) => {
+                let firstKey = _items[0];
+                if (Object.keys(data).indexOf(firstKey) >= 0) {
+                  totalCount += data[firstKey].length;
+                  finalData.push({ currentStatus: _items[1]- data[firstKey].length,Brand: _items[0], count: data[firstKey].length });
+          
+                } else {
+                  finalData.push({currentStatus: _items[1],
+                       Brand: _items[0], count: 0 });
+                }
+              });
+         let _finalData = _.findIndex(finalData, function(o) { return o.currentStatus <= 10; });
+            if(_finalData >= 0){
+                
+               if(!this.state.isrendered){
+                let _isgettingoutofstock = finalData[_finalData].Brand;
+                  this.getToast(_isgettingoutofstock);
+               } 
+            }
+
+        }
+       
+       
         const header = (
             <div className="table-header">
                 <div className="p-col-6 left_container">
@@ -217,15 +251,21 @@ class ItemrequestDataTable extends Component {
                 </div>
             </div>
         );
+
+        const deleteProductDialogFooter = (
+            <React.Fragment>
+                <Button label="Yes" icon="pi pi-check" className="p-button-text yesbtn" onClick={this.deleteWaterRequest} />
+                <Button label="No" icon="pi pi-times" className="p-button-text nobtn" onClick={this.hideDeleteProductDialog} />
+            </React.Fragment>
+        );
        
         return (
             <div className="datatable_water_Requests">
-                {/* <div className="water_status_wrapper">
+                <div className="water_status_wrapper">
                 {
-                    finalData.map((_count)=>{
+                    finalData.map((_count,index)=>{
                         let classname= _count.currentStatus < 10 ? "gettingoutofstock" :"";
-                        {this.getToast(_count)}
-                        return( <div className="water_count_status"> 
+                        return( <div key={index} className="water_count_status"> 
                         <div className={`${classname} current_water_stock`} >{_count.currentStatus} </div>
                         <div className="water_brand">{_count.Brand} </div>
                         <div className="current_water_orders"> {_count.count}</div>
@@ -233,10 +273,12 @@ class ItemrequestDataTable extends Component {
                        );
                     })
                 }
-                </div> */}
+                </div>
                 <div className="card" ref={this.datatableRef}>
                     <DataTable ref={(el) => this.dt = el} value={this.state.ItemRequests}
-                        dataKey="id" paginator rows={13}
+                        dataKey="id"
+                         paginator ={(this.state.ItemRequests && this.state.ItemRequests.length >=13) ? true : false }
+                         rows={13}
                         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
                         globalFilter={this.state.globalFilter}
                         header={header}
@@ -255,6 +297,11 @@ class ItemrequestDataTable extends Component {
                         <Column header="Delete" body={this.actionBodyTemplate} headerStyle={{ width: '5rem' }} bodyStyle={{ textAlign: 'center' }} ></Column>
                         <Column header="Status" body={this.statusBodyTemplate} headerStyle={{ width: '5rem' }} bodyStyle={{ textAlign: 'center' }} ></Column>
                     </DataTable>
+                    <Dialog visible={this.state.deleteProductDialog} style={{ width: '450px' }} header="Confirm" modal footer={deleteProductDialogFooter} onHide={this.hideDeleteProductDialog}>
+                    <div className="confirmation-content">
+            {this.state.rowdata ? <span><b>Are you sure you want to delete</b> <b>{this.state.rowdata.Flat}</b><b>'s  </b><b>{this.props.requestsType}</b> <b>  ?</b></span> :""}
+                    </div>
+                </Dialog>
                 </div>
             </div>
         );
