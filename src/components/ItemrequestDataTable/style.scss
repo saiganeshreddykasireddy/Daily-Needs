@@ -1,84 +1,61 @@
 .datatable_water_Requests {
-  .p-dialog-titlebar{
-    // width: 640px;
-        height: 46px;
-        border-radius: 8px 8px 0px 0px;
-        opacity: 1;
-        border:none;
-        background-color: #627484 !important;
-        border-bottom: none;    
-        color:#fcf8f8 !important;
-        border:none !important;
-    }
-    .p-dialog-titlebar-close-icon{
-      color:#fcf8f8 !important;
-    }
-    .p-link:focus {
-        box-shadow: none;
-        color:#fcf8f8 !important;
-      }
-    span.p-dialog-title{
-        float: left;
-       
-    }
-  .p-dialog-content{
-    border: none !important;
-    height: 60px;
-    display: flex;
-    align-items: center;
-  }
-    .p-dialog-footer{
-      display: flex;
-      justify-content: center;
-      border-radius: 0px 0px 7px 7px;
-      border: none !important;
-    .p-button{
-      width: 80px;
-      height: 30px;
-      border-radius: 2px;
-      opacity: 1;
-      padding: none !important;
-      margin: 0px 5px;
-      border: none;
-      color: #ffff;
-      font-size: 12px;
-    }
-    }
-      .nobtn{
-         background-color: #484848 !important;
-      }
-      .yesbtn{
-        background-color: #4b757c !important;
-      }
+  
     .water_status_wrapper {
       display: flex;
       justify-content: center;
       margin-bottom: 10px;
       .water_count_status {
-        width: 120px;
-        height: 25px;
+        width: 200px;
+        height: 85px;
         border: 1px solid #d4d4d4;
         margin-right: 5px;
         font-weight: 600;
         background: transparent linear-gradient(180deg, #74a6b6 0%, #2c4c51 100%)
           0% 0% no-repeat padding-box;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
         color: #f8f2f2;
         font-size: 12px;
+        .status{
+          display: inline-flex;
+          padding: 1px 5px 0px 5px ;
+        }
         .water_brand {
           font-weight: inherit;
+          display: flex;
+          justify-content: center;
+          font-size: 13px;
+          padding-bottom: 2px !important;
+          border-bottom: 2px solid;
+
         }
         .current_water_stock,
         .current_water_orders {
-          width: 21px;
+          width: 30px;
           height: 20px;
           border-radius: 2px;
-          margin: 0px 5px 0px 5px;
+          margin: 5px 5px 0px 5px;
           display: flex;
           justify-content: center;
           align-items: center;
+        }
+        .sub_status{
+          font-size: 12px;
+          color: #f6f8f8;
+        }
+        .orders-left{
+          padding-left: 19px;
+          .current_water_orders{
+            margin-left: 24px;
+          }
+
+        }
+        .current-stock{
+      .current_water_stock{
+        margin-left: 13px;
+      }
+
         }
         .current_water_stock {
           background: #00a244 0% 0% no-repeat padding-box;
@@ -215,4 +192,59 @@
       }
     }
   }
-  
+  .delete_product_dialog{
+    .p-dialog-titlebar{
+      // width: 640px;
+          height: 46px;
+          border-radius: 8px 8px 0px 0px;
+          opacity: 1;
+          border:none;
+          background-color: #627484 !important;
+          border-bottom: none;    
+          color:#fcf8f8 !important;
+          border:none !important;
+      }
+      .p-dialog-titlebar-close-icon{
+        color:#fcf8f8 !important;
+      }
+      .p-link:focus {
+          box-shadow: none;
+          color:#fcf8f8 !important;
+        }
+      span.p-dialog-title{
+          float: left;
+         
+      }
+    .p-dialog-content{
+      border: none !important;
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+      .p-dialog-footer{
+        display: flex;
+        justify-content: center;
+        border-radius: 0px 0px 7px 7px;
+        border: none !important;
+      .p-button{
+        width: 80px;
+        height: 30px;
+        border-radius: 2px;
+        opacity: 1;
+        padding: none !important;
+        margin: 0px 5px;
+        border: none;
+        color: #ffff;
+        font-size: 12px;
+      }
+      }
+        .nobtn{
+           background-color: #484848 !important;
+        }
+        .yesbtn{
+          background-color: #4b757c !important;
+        }
+  }
+  .p-link:focus {
+box-shadow: none !important;
+  }

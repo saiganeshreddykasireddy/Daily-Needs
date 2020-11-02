@@ -9,11 +9,11 @@ import { Dashboard } from './components/Dashboard';
 import PaperRequest from "./components/PaperRequest";
 import WaterRequest from "./components/WaterRequest";
 import MilkRequest from "./components/MilkRequest";
-import ItemsList from "./components/ItemsList";
+import _ItemsList from "./components/ProductsList";
 import Advertisements from "./components/Advertisements";
 
 import { ChartsDemo } from './components/ChartsDemo';
-import {getwaterRequests} from "./actions/action";
+import {getwaterRequests,getProductsList} from "./actions/action";
 import { connect } from 'react-redux'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -49,6 +49,8 @@ class App extends Component {
     }
 componentDidMount(){
 this.props.dispatch(getwaterRequests());
+this.props.dispatch(getProductsList());
+
 }
     onWrapperClick(event) {
         if (!this.menuClick) {
@@ -204,7 +206,7 @@ this.props.dispatch(getwaterRequests());
                     <Route path="/" exact component={Dashboard} />
                     <Route path="/Advertisements" component={Advertisements} />
 
-                    <Route path="/ItemsList" component={ItemsList} />
+                    <Route path="/ItemsList" component={_ItemsList} />
 
                     <Route path="/WaterRequest" component={WaterRequest} />
                     <Route path="/PaperRequest" component={PaperRequest} />

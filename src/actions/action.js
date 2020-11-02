@@ -93,3 +93,49 @@ export const addWaterRequest = (newdata,requestsType) => {
   }
 }
 
+export const getProductsList = () => {
+  return (dispatch) => {
+    let res = axios.get('http://localhost:3007/products')
+      .then(res => {
+        dispatch({
+          type: 'FETCH_PRODUCTS',
+          payload: res.data
+        });
+      })
+  }
+}
+
+export const editProductsList = (data) => {
+  return (dispatch) => {
+    dispatch({
+      type: "EDIT_PRODUCTS_LIST",
+      payload: {
+        data,
+        
+      }
+    })
+  }
+}
+
+export const deleteProduct = (rowdata) => {
+  return (dispatch) => {
+    dispatch({
+      type: "DELETE_PRODUCT",
+      payload: {
+        rowdata,
+      }
+    });
+  }
+}
+
+export const addNewProduct = (newdata) => {
+ console.log(newdata,"<-------action.js");
+  return (dispatch) => {
+    dispatch({
+      type: "ADD_NEW_PRODUCT",
+      payload: {
+        newdata,
+      }
+    });
+  }
+}

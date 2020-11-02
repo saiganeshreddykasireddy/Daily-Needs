@@ -2,6 +2,7 @@ import _ from "lodash";
 
 const initialState = {
     Requests: [],
+    products:[],
   }
   
   export default function reducers(state = initialState, action) {
@@ -11,10 +12,10 @@ const initialState = {
           ...state,
           Requests: action.payload
         };
-        case 'POST_WATER_REQUESTS':
+        case 'FETCH_PRODUCTS':
         return {
           ...state,
-          Requests: action.payload
+          products: action.payload
         };
   
       case 'EDIT_WATER_REQUESTS':
@@ -58,6 +59,42 @@ const initialState = {
           ...state,
           Requests: updateRequests
         });
+
+
+        case 'EDIT_PRODUCTS_LIST':
+          const record = action.payload.data;
+          // for (let index = 0; index < state.Requests.length; index++) {
+          //   const record = state.Requests[index];
+          //   record.editMode = (action.payload.Flat === record.Flat);
+          // }
+          return Object.assign({
+            ...state,
+            products: record
+          });
+    
+         
+    
+        // case 'DELETE_PRODUCT':
+        //   let ReqType= action.payload.requestsType;
+        //   let updatedRequest;
+        //   console.log(action.payload.rowdata.Flat);
+        //   updatedRequest  = state.Requests;
+        //   return Object.assign({
+        //     ...state,
+        //     Requests: updatedRequest
+        //   });
+    
+  
+        // case 'ADD_NEW_PRODUCT':
+        // const requesttype = action.payload.requestsType;
+        // let updateRequests;
+        //   const addedRequests = state.Requests[requesttype].concat(action.payload.newdata);
+        //   state.Requests[requesttype] = addedRequests;
+        //   updateRequests  = state.Requests; 
+        //    return Object.assign({
+        //     ...state,
+        //     Requests: updateRequests
+        //   });
   
       default:
         return state;

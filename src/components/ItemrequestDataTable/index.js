@@ -266,9 +266,20 @@ class ItemrequestDataTable extends Component {
                     finalData.map((_count,index)=>{
                         let classname= _count.currentStatus < 10 ? "gettingoutofstock" :"";
                         return( <div key={index} className="water_count_status"> 
+                         <div className="water_brand p-col-12">{_count.Brand} </div>
+                         <div className=" p-col-12 status">
+                         <div className="p-col-6 sub_status  current-stock ">
+                             <div className=" "> Stock Left </div>
                         <div className={`${classname} current_water_stock`} >{_count.currentStatus} </div>
-                        <div className="water_brand">{_count.Brand} </div>
-                        <div className="current_water_orders"> {_count.count}</div>
+                         </div>
+                         <div className="p-col-6 sub_status orders-left">
+                         <div className=""> Orders Left</div>
+
+                         <div className="current_water_orders"> {_count.count}</div>
+
+                         </div>
+
+                         </div>
                         </div>
                        );
                     })
@@ -277,7 +288,7 @@ class ItemrequestDataTable extends Component {
                 <div className="card" ref={this.datatableRef}>
                     <DataTable ref={(el) => this.dt = el} value={this.state.ItemRequests}
                         dataKey="id"
-                         paginator ={(this.state.ItemRequests && this.state.ItemRequests.length >=13) ? true : false }
+                         paginator ={(this.state.ItemRequests && this.state.ItemRequests.length >13) ? true : false }
                          rows={13}
                         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
                         globalFilter={this.state.globalFilter}
@@ -297,7 +308,7 @@ class ItemrequestDataTable extends Component {
                         <Column header="Delete" body={this.actionBodyTemplate} headerStyle={{ width: '5rem' }} bodyStyle={{ textAlign: 'center' }} ></Column>
                         <Column header="Status" body={this.statusBodyTemplate} headerStyle={{ width: '5rem' }} bodyStyle={{ textAlign: 'center' }} ></Column>
                     </DataTable>
-                    <Dialog visible={this.state.deleteProductDialog} style={{ width: '450px' }} header="Confirm" modal footer={deleteProductDialogFooter} onHide={this.hideDeleteProductDialog}>
+                    <Dialog visible={this.state.deleteProductDialog} style={{ width: '450px' }} header="Confirm" modal footer={deleteProductDialogFooter} onHide={this.hideDeleteProductDialog} className="delete_product_dialog">
                     <div className="confirmation-content">
             {this.state.rowdata ? <span><b>Are you sure you want to delete</b> <b>{this.state.rowdata.Flat}</b><b>'s  </b><b>{this.props.requestsType}</b> <b>  ?</b></span> :""}
                     </div>
