@@ -29,7 +29,8 @@ class ItemrequestDataTable extends Component {
             globalFilter: null,
             FlatsList: [],
             suggestedFlats: null,
-            deleteProductDialog:false
+            deleteProductDialog:false,
+            first:0
         };
         this.datatableRef = React.createRef();
         this.originalRows = {};
@@ -290,10 +291,13 @@ class ItemrequestDataTable extends Component {
                         dataKey="id"
                          paginator ={(this.state.ItemRequests && this.state.ItemRequests.length >13) ? true : false }
                          rows={13}
+                         first={(this.state.ItemRequests && this.state.ItemRequests.length >13) ? this.state.first : 0}
+                          onPage={(e) => this.setState({first: e.first})}
                         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
                         globalFilter={this.state.globalFilter}
                         header={header}
                         editMode="row"
+                        emptyMessage="No Orders Found"
                         onRowEditInit={this.onRowEditInit}
                         onRowEditCancel={this.onRowEditCancel}
                         reorderableColumns

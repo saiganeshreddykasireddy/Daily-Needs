@@ -29,21 +29,9 @@ class ItemsList extends Component {
 
     componentDidMount(props) {
         let { products, ItemList } = this.props;
-        // let sortOptions=[];
-        // console.log(products,"cdm");
-        // let _products = _.groupBy(products,"Type") || [];
-        //  let sortoptionsArray =  Object.keys(_products) || [];
-        //  sortoptionsArray.map((_item,index) => {
-        //     return sortOptions.push({
-        //         label:  _item,
-        //         value:  _item,
-        //         key: index
-        //     });
-        // });
+      
         this.setState({
             products: products,
-            // sortOptions:sortOptions
-
         })
     }
     componentWillReceiveProps() {
@@ -51,8 +39,6 @@ class ItemsList extends Component {
 
         this.setState({
             products: products,
-            // sortOptions:ItemList
-
         })
     }
 
@@ -200,7 +186,7 @@ class ItemsList extends Component {
              val = e.checked;
         }
         else{
-            val = parseInt(e.target.value);
+            val = parseInt(e.target.value) || e.target.value;
         }
         let products = [...this.state.products];
         let {editedRow}=this.state;
@@ -209,11 +195,12 @@ class ItemsList extends Component {
         let _editedRow = { ...this.state.editedRow };
         _editedRow[`${name}`] = val;
         products[Index] = _editedRow;
-        this.props.dispatch(editProductsList(products));
         this.setState({ 
             products:products,
             editedRow:_editedRow
          });
+        // this.props.dispatch(editProductsList(products));
+
     }
     onnewInputChange = (e,name)=>{
         let val = "";

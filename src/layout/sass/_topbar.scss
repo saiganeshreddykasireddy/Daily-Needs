@@ -5,8 +5,9 @@
     color: #ffffff;
     z-index: 999;
     right: 0;
+    background:#607d8b !important;
     @include clearfix();
-    @include linear-gradient-left($topbarLeftBgColor,$topbarRightBgColor);
+    // @include linear-gradient-left($topbarLeftBgColor,$topbarRightBgColor);
     @include transition(left $transitionDuration);
 
     .layout-topbar-icons {

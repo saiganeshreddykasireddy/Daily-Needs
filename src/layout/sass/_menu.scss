@@ -1,9 +1,15 @@
 .layout-menu-container {
     padding-bottom: 120px;
-    margin-top: -54px;
-
 }
-
+.title-main{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffffbf;
+}
 .layout-menu {
     list-style-type: none;
     margin: 0;

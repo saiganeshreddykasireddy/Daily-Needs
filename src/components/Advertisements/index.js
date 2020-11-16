@@ -17,7 +17,8 @@ import { FileUpload } from 'primereact/fileupload';
     onBasicUpload() {
     }
 
-    onBasicUploadAuto() {
+    onBasicUploadAuto(event) {
+        console.log(event.files);
     }
 
     render() {
@@ -26,7 +27,8 @@ import { FileUpload } from 'primereact/fileupload';
 \
                 <div className="card">
                     
-                    <FileUpload mode="basic" name="demo[]" url="./upload.php" accept="image/*" maxFileSize={1000000} onUpload={this.onBasicUploadAuto} auto chooseLabel="Browse" />
+                    <FileUpload mode="basic" name="demo[]"   maxFileSize={1000000} onUpload={this.onBasicUploadAuto}  chooseLabel="Browse"					multiple={true}
+ />
                 </div>
             </div>
         )

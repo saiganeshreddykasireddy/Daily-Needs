@@ -139,3 +139,15 @@ export const addNewProduct = (newdata) => {
     });
   }
 }
+
+export const getFlatsList = () => {
+  return (dispatch) => {
+    let res = axios.get('http://localhost:3006/FlatsList')
+      .then(res => {
+        dispatch({
+          type: 'FETCH_FLATS',
+          payload: res.data
+        });
+      })
+  }
+}

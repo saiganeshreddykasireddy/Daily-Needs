@@ -1,0 +1,598 @@
+{
+    "FlatsList": [
+        {
+            "Flat": "A101",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 1,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Paper"
+                }
+            ]
+        },
+        {
+            "Flat": "A102",
+            "isActivated": false,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 1,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Paper"
+                }
+            ]
+        },
+        {
+            "Flat": "A103",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 1,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Paper"
+                }
+            ]
+        },
+        {
+            "Flat": "A104",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "A105",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "A106",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "A107",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "A108",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "A201",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "A202",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "A203",
+            "isActivated": false,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "A204",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "A205",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "A206",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "B101",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "B102",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "B103",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "B104",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "B105",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "B106",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "B107",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "B108",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "B201",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "B202",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "B203",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "B204",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        },
+        {
+            "Flat": "B205",
+            "isActivated": true,
+            "mobile": 9998987767,
+            "subscriptionDetails": [
+                {
+                    "Brand": "Amul",
+                    "Quantity": 3,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "Heritage",
+                    "Quantity": 2,
+                    "Type": "Milk"
+                },
+                {
+                    "Brand": "The Hindu",
+                    "Quantity": 1,
+                    "Type": "Eenadu"
+                }
+            ]
+        }
+    ]
+}

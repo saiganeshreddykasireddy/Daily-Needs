@@ -1,0 +1,166 @@
+.Flats_Activation {
+  width: 600px;
+  margin-top: 5px;
+  .p-datatable-header {
+    padding: 0em !important;
+    text-align: right !important;
+  }
+  td {
+    font-size: 13px !important;
+    button.p-row-editor-init.p-link {
+      width: 1.5em !important;
+      height: 1.4em !important;
+      padding: 1px !important;
+    }
+  }
+  input.p-inputtext.p-component {
+    width: 175px;
+    font-size: 12px;
+    padding: 0.329em;
+  }
+
+  i.pi.pi-search {
+    position: relative;
+    font-size: 1.15em;
+    right: 1.3em;
+    top: 2px;
+  }
+}
+.Blocks_list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  .blocks {
+    width: 100px;
+    height: 25px;
+    background: transparent linear-gradient(180deg, #74a6b6 0%, #2c4c51 100%) 0%
+      0% no-repeat padding-box;
+    margin-right: 15px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    align-items: center;
+    font-weight: bold;
+  }
+  .AactiveclsA,
+  .BactiveclsB,
+  .CactiveclsC,
+  .DactiveclsD,
+  .EactiveclsE,
+  .FactiveclsF,
+  .GactiveclsG,
+  .HactiveclsH,
+  .IactiveclsI {
+    background: #1d91a8 !important;
+  }
+}
+.subscription_overlay {
+  width: 600px;
+  background: transparent
+    radial-gradient(closest-side at 38% 0%, #1b4e58 0%, #1c252d 100%) 0% 0%
+    no-repeat padding-box !important;
+  border: none !important;
+  padding: 0em !important;
+  .p-col-12.left_container {
+    text-align: center;
+    margin-top: 25px;
+}
+  .Subscriptionpage_profile {
+    height: 36px;
+    background: #023141 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 10px #00000033;
+    color: #ffffffbf;
+    font-size: 14px;
+    font-weight: bold;
+    i.pi.pi-user {
+      margin: 2px 5px 0px 0px;
+      font-size: 1.1em !important;
+    }
+  }
+  .p-sidebar-close {
+    margin: 8px 8px;
+    color: #ffffffbf !important;
+  }
+  .profile {
+    display: flex;
+    .profile_name,
+    .flat_num {
+      width: 48px;
+      height: 20px;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: bold;
+      margin: 10px 0px 0px 10px;
+    }
+    .flat_num {
+      width: auto !important;
+      margin: 10px 0px 0px 0px !important;
+    }
+    .colon {
+      color: #ffffff;
+      margin: 10px 10px 0px 0px;
+    }
+  }
+  .type-header {
+    height: 30px;
+    background: #161617 0% 0% no-repeat padding-box;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: #ffffffbf;
+    font-size: 14px;
+    font-weight: bold;
+    margin:15px 0px 10px 0px;
+  }
+  .items{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    img{
+      width: 100px;
+    height: 100px;
+    }
+    .product-list-item{
+      width: 150px;
+    margin: 4px 0px 0px 10px;
+    .item_data {
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 2px 0px 0px 10px;
+  }
+  .p-button.p-button-icon-only {
+    width: 1.6em;
+    height: 1.6em;
+    font-size: 12px;
+    margin: 5px 0px 0px 13px;
+}
+button.p-button.p-component.p-button-rounded.delete_icon.p-button-icon-only {
+  background-color: #e6154f;
+  border: 1px solid #e6154f;
+}
+    }
+  }
+}
+.p-button:enabled:focus {
+box-shadow: none !important;
+}
+.editable_dialogs{
+  .p-field{
+    margin: 5px;
+  }
+  .p-formgrid{
+    margin-top: 2px;
+  }
+  .p-dialog-content{
+    height: 80px;
+    label {
+      font-weight: bold;
+  }
+    .p-inputtext {
+      margin-top: 5px;
+    }
+  }
+}

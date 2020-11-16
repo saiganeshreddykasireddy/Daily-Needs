@@ -76,22 +76,7 @@
         font-size: 12px;
         border-radius: 3px;
       }
-      .p-paginator.p-component.p-unselectable-text.p-paginator-bottom {
-        background: #627484 0% 0% no-repeat padding-box;
-        .p-paginator-prev,
-        .p-paginator-next,
-        .p-paginator-last,
-        .p-paginator-first,
-        .p-paginator-page {
-          color: #fcf3f3;
-        }
-      }
-      .p-datatable-thead > tr > th {
-        color: #f8eeee;
-        background: #627484 0% 0% no-repeat padding-box;
-        font-size: 12px;
-        height: 40px;
-      }
+  
       .p-sortable-column:not(.p-highlight):hover {
         color: #f8eeee;
         background: #627484 0% 0% no-repeat padding-box;
@@ -102,10 +87,7 @@
       .p-sortable-column-icon {
         color: #e7dada !important;
       }
-      .p-inputtext:enabled:focus {
-        border: 1px solid #a6a6a6;
-        box-shadow: none;
-      }
+     
       .p-button:enabled:focus {
         box-shadow: none;
       }
@@ -138,61 +120,10 @@
           }
         }
       }
-      .p-datatable-tbody {
-        tr:nth-child(even) {
-          background-color:#e5e5e5;
-        }
-        .p-datatable-row {
-          td {
-            font-size: 12px;
-            button.p-row-editor-init.p-link {
-              width: 2.1em;
-              height: 2.1em;
-              background-color: #628a15;
-              border: 1px solid #628a15;
-              color: white;
-              padding: 3px;
-              font-size: 13px;
-            }
-            .p-button-rounded {
-              border-radius: 4px;
-              margin-right: 5px;
-            }
-            .delivery_icon {
-              width: 2em;
-              height: 2em;
-            }
-            .delete_icon {
-              background-color: #e6154f;
-              border: 1px solid #e6154f;
-              width: 2em;
-              height: 2em;
-            }
-            .p-row-editor-save.p-link,
-            .p-row-editor-cancel.p-link {
-              width: 1.5em;
-              height: 1.5em;
-              font-size: 14px;
-              margin-right: 5px;
-              color: white;
-              padding-top: 1px;
-            }
-            .p-row-editor-save.p-link {
-              background-color: #08b17a;
-            }
-            .p-row-editor-cancel.p-link {
-              background-color: #ec82d1;
-            }
-            input.p-inputtext.p-component {
-              font-size: 12px;
-              padding: 0.38em;
-            }
-          }
-        }
-      }
+     
     }
   }
-  .delete_product_dialog{
+  .delete_product_dialog,.editable_dialogs{
     .p-dialog-titlebar{
       // width: 640px;
           height: 46px;
@@ -227,7 +158,7 @@
         border-radius: 0px 0px 7px 7px;
         border: none !important;
       .p-button{
-        width: 80px;
+        width: 80px !important;
         height: 30px;
         border-radius: 2px;
         opacity: 1;
@@ -236,6 +167,7 @@
         border: none;
         color: #ffff;
         font-size: 12px;
+        cursor: pointer;
       }
       }
         .nobtn{
@@ -247,4 +179,76 @@
   }
   .p-link:focus {
 box-shadow: none !important;
+  }
+  .p-paginator.p-component.p-unselectable-text.p-paginator-bottom {
+    background: #627484 0% 0% no-repeat padding-box;
+    .p-paginator-prev,
+    .p-paginator-next,
+    .p-paginator-last,
+    .p-paginator-first,
+    .p-paginator-page {
+      color: #fcf3f3;
+    }
+  }
+  .p-datatable-thead > tr > th {
+    color: #f8eeee !important;
+    background: #627484 0% 0% no-repeat padding-box !important;
+    font-size: 12px !important;
+    height: 40px !important;
+  }
+  .p-inputtext:enabled:focus {
+    border: 1px solid #a6a6a6 !important;
+    box-shadow: none !important;
+  }
+  .p-datatable-tbody {
+    tr:nth-child(even) {
+      background-color:#e5e5e5 !important;
+    }
+    .p-datatable-row {
+      td {
+        font-size: 12px !important;
+        button.p-row-editor-init.p-link {
+          width: 2.1em;
+          height: 2.1em;
+          background-color: #628a15 !important;
+          border: 1px solid #628a15 !important;
+          color: white !important;
+          padding: 3px ;
+          font-size: 13px;
+        }
+        .p-button-rounded {
+          border-radius: 4px;
+          margin-right: 5px;
+        }
+        .delivery_icon {
+          width: 2em;
+          height: 2em;
+        }
+        .delete_icon {
+          background-color: #e6154f;
+          border: 1px solid #e6154f;
+          width: 2em;
+          height: 2em;
+        }
+        .p-row-editor-save.p-link,
+        .p-row-editor-cancel.p-link {
+          width: 1.5em;
+          height: 1.5em;
+          font-size: 14px;
+          margin-right: 5px;
+          color: white;
+          padding-top: 1px;
+        }
+        .p-row-editor-save.p-link {
+          background-color: #08b17a;
+        }
+        .p-row-editor-cancel.p-link {
+          background-color: #ec82d1;
+        }
+        input.p-inputtext.p-component {
+          font-size: 12px;
+          padding: 0.38em;
+        }
+      }
+    }
   }

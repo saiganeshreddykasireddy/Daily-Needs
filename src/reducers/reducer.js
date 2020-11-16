@@ -3,6 +3,7 @@ import _ from "lodash";
 const initialState = {
     Requests: [],
     products:[],
+    FlatsList:[]
   }
   
   export default function reducers(state = initialState, action) {
@@ -17,7 +18,11 @@ const initialState = {
           ...state,
           products: action.payload
         };
-  
+        case 'FETCH_FLATS':
+        return {
+          ...state,
+          FlatsList: action.payload
+        };
       case 'EDIT_WATER_REQUESTS':
         const udpatedRecords = [];
         let reqType= action.payload.requestsType;

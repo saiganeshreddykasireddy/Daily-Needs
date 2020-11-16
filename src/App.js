@@ -11,9 +11,9 @@ import WaterRequest from "./components/WaterRequest";
 import MilkRequest from "./components/MilkRequest";
 import _ItemsList from "./components/ProductsList";
 import Advertisements from "./components/Advertisements";
-
+import _FlatsActivation from "./components/FlatsDetails";
 import { ChartsDemo } from './components/ChartsDemo';
-import {getwaterRequests,getProductsList} from "./actions/action";
+import {getwaterRequests,getProductsList,getFlatsList} from "./actions/action";
 import { connect } from 'react-redux'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -50,6 +50,7 @@ class App extends Component {
 componentDidMount(){
 this.props.dispatch(getwaterRequests());
 this.props.dispatch(getProductsList());
+this.props.dispatch(getFlatsList());
 
 }
     onWrapperClick(event) {
@@ -195,9 +196,7 @@ this.props.dispatch(getProductsList());
                 <AppTopbar onToggleMenu={this.onToggleMenu} />
 
                 <div ref={(el) => this.sidebar = el} className={sidebarClassName} onClick={this.onSidebarClick}>
-                    <div className="layout-logo">
-                        <img alt="Logo" src={logo} />
-                    </div>
+                    <div className="title-main">Sri Srinivasa Traders</div>
                     {/* <AppProfile /> */}
                     <AppMenu model={this.menu} onMenuItemClick={this.onMenuItemClick} />
                 </div>
@@ -211,6 +210,8 @@ this.props.dispatch(getProductsList());
                     <Route path="/WaterRequest" component={WaterRequest} />
                     <Route path="/PaperRequest" component={PaperRequest} />
                     <Route path="/MilkRequest" component={MilkRequest} />
+                    <Route path="/FlatsActivation" component={_FlatsActivation} />
+
 
 
                 </div>
