@@ -6,7 +6,6 @@ const _ItemsList = (props)=>{
         let { products :[] } = state;
         return products;
     });
-    console.log(products);
     const [ItemList, setItemList] = useState([]);
     useEffect(() => {
         let sortOptions =[];

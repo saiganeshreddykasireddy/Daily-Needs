@@ -13,7 +13,7 @@ import _ItemsList from "./components/ProductsList";
 import Advertisements from "./components/Advertisements";
 import _FlatsActivation from "./components/FlatsDetails";
 import { ChartsDemo } from './components/ChartsDemo';
-import {getwaterRequests,getProductsList,getFlatsList} from "./actions/action";
+import {getwaterRequests,getProductsList,getFlatsList,getadvancedRequests} from "./actions/action";
 import { connect } from 'react-redux'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -51,6 +51,7 @@ componentDidMount(){
 this.props.dispatch(getwaterRequests());
 this.props.dispatch(getProductsList());
 this.props.dispatch(getFlatsList());
+this.props.dispatch(getadvancedRequests());
 
 }
     onWrapperClick(event) {

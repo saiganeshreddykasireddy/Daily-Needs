@@ -12,6 +12,20 @@ export const getwaterRequests = () => {
   }
 }
 
+export const getadvancedRequests = () => {
+  return (dispatch) => {
+    let res = axios.get('http://localhost:3009/Requests')
+      .then(res => {
+        dispatch({
+          type: 'FETCH_ADVANCED_WATER_REQUESTS',
+          payload: res.data
+        });
+      })
+  }
+}
+
+
+
 //  export const postWaterRequests = (requests) => {
 //   return (dispatch) => {
 //     let res = axios.post('http://localhost:3008/Requests',{

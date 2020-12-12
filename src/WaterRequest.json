@@ -110,6 +110,400 @@
         "Brand":"Aquapure",
         "Quantity":2,
         "Price":80
+    }, {
+        "Flat":"D 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":200
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Aquapure",
+        "Quantity":1,
+        "Price":40
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Bailey",
+        "Quantity":2 ,       
+        "Price":100
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":200
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":200
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Bailey",
+        "Quantity":1,
+        "Price":50
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Kinley",
+        "Quantity":2,
+        "Price":140
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Kinley",
+        "Quantity":2,
+        "Price":140
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Kinley",
+        "Quantity":1  ,      
+        "Price":70
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Aquapure",
+        "Quantity":1,
+        "Price":40
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    }, {
+        "Flat":"D 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":200
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Aquapure",
+        "Quantity":1,
+        "Price":40
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Bailey",
+        "Quantity":2 ,       
+        "Price":100
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":200
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":200
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Bailey",
+        "Quantity":1,
+        "Price":50
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Kinley",
+        "Quantity":2,
+        "Price":140
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Kinley",
+        "Quantity":2,
+        "Price":140
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Kinley",
+        "Quantity":1  ,      
+        "Price":70
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Aquapure",
+        "Quantity":1,
+        "Price":40
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },{
+        "Flat":"A 1208",
+        "Brand":"Bisleri",
+        "Quantity":1,
+        "Price":100
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Kinley",
+        "Quantity":1,
+        "Price":70
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Kinley",
+        "Quantity":1  ,      
+        "Price":70
+
+
+        
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":200
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Aquapure",
+        "Quantity":1,
+        "Price":40
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Bailey",
+        "Quantity":2 ,       
+        "Price":100
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":200
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":200
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Bailey",
+        "Quantity":1,
+        "Price":50
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Kinley",
+        "Quantity":2,
+        "Price":140
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Kinley",
+        "Quantity":2,
+        "Price":140
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Kinley",
+        "Quantity":1  ,      
+        "Price":70
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Aquapure",
+        "Quantity":1,
+        "Price":40
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },{
+        "Flat":"A 1208",
+        "Brand":"Bisleri",
+        "Quantity":1,
+        "Price":100
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Kinley",
+        "Quantity":1,
+        "Price":70
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Kinley",
+        "Quantity":1  ,      
+        "Price":70
+
+
+        
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":200
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Aquapure",
+        "Quantity":1,
+        "Price":40
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Bailey",
+        "Quantity":2 ,       
+        "Price":100
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":200
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Bisleri",
+        "Quantity":2,
+        "Price":200
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Bailey",
+        "Quantity":1,
+        "Price":50
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Kinley",
+        "Quantity":2,
+        "Price":140
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Kinley",
+        "Quantity":2,
+        "Price":140
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Kinley",
+        "Quantity":1  ,      
+        "Price":70
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Aquapure",
+        "Quantity":1,
+        "Price":40
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Aquapure",
+        "Quantity":2,
+        "Price":80
     }
 ],
 "PaperRequests":[
@@ -184,10 +578,721 @@
         "Brand":"The Hindu",
         "Quantity":1,
         "Price":9
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Hindu",
+        "Quantity":1,
+        "Price":10
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Eenadu",
+        "Quantity":1,
+        "Price":5
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Sakshi",
+        "Quantity":1  ,      
+        "Price":7
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Andhrajyothy",
+        "Quantity":1,
+        "Price":2
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Times Of India",
+        "Quantity":1,
+        "Price":8
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Sakshi",
+        "Quantity":1,
+        "Price":7
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Sakshi",
+        "Quantity":1,
+        "Price":7
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Andhrajyothi",
+        "Quantity":1,
+        "Price":2
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Economic Times",
+        "Quantity":1 ,       
+        "Price":10
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Sakshi",
+        "Quantity":1,
+        "Price":7
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Eenadu",
+        "Quantity":1,
+        "Price":6
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"The Hindu",
+        "Quantity":1,
+        "Price":9
+    },{
+        "Flat":"A 1208",
+        "Brand":"Hindu",
+        "Quantity":1,
+        "Price":10
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Eenadu",
+        "Quantity":1,
+        "Price":5
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Sakshi",
+        "Quantity":1  ,      
+        "Price":7
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Andhrajyothy",
+        "Quantity":1,
+        "Price":2
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Times Of India",
+        "Quantity":1,
+        "Price":8
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Sakshi",
+        "Quantity":1,
+        "Price":7
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Sakshi",
+        "Quantity":1,
+        "Price":7
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Andhrajyothi",
+        "Quantity":1,
+        "Price":2
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Economic Times",
+        "Quantity":1 ,       
+        "Price":10
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Sakshi",
+        "Quantity":1,
+        "Price":7
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Eenadu",
+        "Quantity":1,
+        "Price":6
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"The Hindu",
+        "Quantity":1,
+        "Price":9
+    },{
+        "Flat":"A 1208",
+        "Brand":"Hindu",
+        "Quantity":1,
+        "Price":10
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Eenadu",
+        "Quantity":1,
+        "Price":5
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Sakshi",
+        "Quantity":1  ,      
+        "Price":7
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Andhrajyothy",
+        "Quantity":1,
+        "Price":2
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Times Of India",
+        "Quantity":1,
+        "Price":8
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Sakshi",
+        "Quantity":1,
+        "Price":7
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Sakshi",
+        "Quantity":1,
+        "Price":7
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Andhrajyothi",
+        "Quantity":1,
+        "Price":2
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Economic Times",
+        "Quantity":1 ,       
+        "Price":10
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Sakshi",
+        "Quantity":1,
+        "Price":7
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Eenadu",
+        "Quantity":1,
+        "Price":6
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"The Hindu",
+        "Quantity":1,
+        "Price":9
     }
 ],
 "MilkRequests":[
     {
+        "Flat":"A 1208",
+        "Brand":"Amul",
+        "Quantity":3,
+        "Price":90
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Heritage",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Vijaya",
+        "Quantity":1  ,      
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Amul",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Jersy",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Jersy full",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Jersy full",
+        "Quantity":1 ,       
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage full",
+        "Quantity":2,
+        "Price":80
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul full",
+        "Quantity":1,
+        "Price":40
+    },{
+        "Flat":"A 1208",
+        "Brand":"Amul",
+        "Quantity":3,
+        "Price":90
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Heritage",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Vijaya",
+        "Quantity":1  ,      
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Amul",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Jersy",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Jersy full",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Jersy full",
+        "Quantity":1 ,       
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage full",
+        "Quantity":2,
+        "Price":80
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul full",
+        "Quantity":1,
+        "Price":40
+    },{
+        "Flat":"A 1208",
+        "Brand":"Amul",
+        "Quantity":3,
+        "Price":90
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Heritage",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Vijaya",
+        "Quantity":1  ,      
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Amul",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Jersy",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Jersy full",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Jersy full",
+        "Quantity":1 ,       
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage full",
+        "Quantity":2,
+        "Price":80
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul full",
+        "Quantity":1,
+        "Price":40
+    } ,{
+        "Flat":"A 1208",
+        "Brand":"Amul",
+        "Quantity":3,
+        "Price":90
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Heritage",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Vijaya",
+        "Quantity":1  ,      
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Amul",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Jersy",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Jersy full",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Jersy full",
+        "Quantity":1 ,       
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage full",
+        "Quantity":2,
+        "Price":80
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul full",
+        "Quantity":1,
+        "Price":40
+    } ,{
+        "Flat":"A 1208",
+        "Brand":"Amul",
+        "Quantity":3,
+        "Price":90
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Heritage",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Vijaya",
+        "Quantity":1  ,      
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Amul",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Jersy",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Jersy full",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Jersy full",
+        "Quantity":1 ,       
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage full",
+        "Quantity":2,
+        "Price":80
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul full",
+        "Quantity":1,
+        "Price":40
+    } ,{
+        "Flat":"A 1208",
+        "Brand":"Amul",
+        "Quantity":3,
+        "Price":90
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Heritage",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Vijaya",
+        "Quantity":1  ,      
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Amul",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Jersy",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Jersy full",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Jersy full",
+        "Quantity":1 ,       
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage full",
+        "Quantity":2,
+        "Price":80
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul full",
+        "Quantity":1,
+        "Price":40
+    } ,{
+        "Flat":"A 1208",
+        "Brand":"Amul",
+        "Quantity":3,
+        "Price":90
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Heritage",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Vijaya",
+        "Quantity":1  ,      
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Amul",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul",
+        "Quantity":1,
+        "Price":30
+    },
+    {
+        "Flat":"A 1208",
+        "Brand":"Jersy",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"B 1208",
+        "Brand":"Jersy full",
+        "Quantity":2,
+        "Price":80
+    },
+    {
+        "Flat":"C 1208",
+        "Brand":"Jersy full",
+        "Quantity":1 ,       
+        "Price":40
+
+    },
+    {
+        "Flat":"D 1208",
+        "Brand":"Heritage full",
+        "Quantity":2,
+        "Price":80
+    }, {
+        "Flat":"E 1208",
+        "Brand":"Heritage",
+        "Quantity":2,
+        "Price":60
+    },
+    {
+        "Flat":"F 1208",
+        "Brand":"Amul full",
+        "Quantity":1,
+        "Price":40
+    } ,{
         "Flat":"A 1208",
         "Brand":"Amul",
         "Quantity":3,
