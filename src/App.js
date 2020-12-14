@@ -9,11 +9,12 @@ import { Dashboard } from './components/Dashboard';
 import PaperRequest from "./components/PaperRequest";
 import WaterRequest from "./components/WaterRequest";
 import MilkRequest from "./components/MilkRequest";
+import FruitRequests from "./components/FruitRequest";
 import _ItemsList from "./components/ProductsList";
 import Advertisements from "./components/Advertisements";
 import _FlatsActivation from "./components/FlatsDetails";
 import { ChartsDemo } from './components/ChartsDemo';
-import {getwaterRequests,getProductsList,getFlatsList,getadvancedRequests} from "./actions/action";
+import {getwaterRequests,getProductsList,getAdvancedFruitsList,getFruitRequests,getFlatsList,getadvancedRequests} from "./actions/action";
 import { connect } from 'react-redux'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -55,6 +56,8 @@ this.props.dispatch(getwaterRequests());
 this.props.dispatch(getProductsList());
 this.props.dispatch(getFlatsList());
 this.props.dispatch(getadvancedRequests());
+this.props.dispatch(getFruitRequests());
+this.props.dispatch(getAdvancedFruitsList())
 
 }
     onWrapperClick(event) {
@@ -144,6 +147,8 @@ this.props.dispatch(getadvancedRequests());
                     { label: 'PaperRequest', icon: 'pi  pi-shopping-cart', to: '/PaperRequest' },
                     { label: 'WaterRequest', icon: 'pi  pi-shopping-cart', to: '/WaterRequest' },
                     { label: 'MilkRequest', icon: 'pi  pi-shopping-cart', to: '/MilkRequest' },
+                    { label: 'FruitRequests', icon: 'pi  pi-shopping-cart', to: '/FruitRequests' },
+
 
                 ]
             },
@@ -215,6 +220,8 @@ this.props.dispatch(getadvancedRequests());
                     <Route path="/PaperRequest" component={PaperRequest} />
                     <Route path="/MilkRequest" component={MilkRequest} />
                     <Route path="/FlatsActivation" component={_FlatsActivation} />
+                    <Route path="/FruitRequests" component={FruitRequests} />
+
 
 
 

@@ -4,7 +4,9 @@ const initialState = {
     Requests: [],
     products:[],
     FlatsList:[],
-    AdvancedRequests:[]
+    AdvancedRequests:[],
+    FruitRequests:[],
+    AdvancedFruitRequests:[]
   }
   
   export default function reducers(state = initialState, action) {
@@ -14,10 +16,20 @@ const initialState = {
           ...state,
           Requests: action.payload
         };
+        case 'FETCH_FRUITS_REQUESTS':
+          return {
+            ...state,
+            FruitRequests: action.payload
+          };
         case 'FETCH_ADVANCED_WATER_REQUESTS':
           return {
             ...state,
             AdvancedRequests: action.payload
+          };
+          case 'FETCH_ADVANCED_FRUITS_REQUEST':
+          return {
+            ...state,
+            AdvancedFruitRequests: action.payload
           };
         case 'FETCH_PRODUCTS':
         return {

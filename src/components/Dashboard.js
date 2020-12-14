@@ -13,19 +13,34 @@ export const Dashboard = () => {
         let { AdvancedRequests } = state;
         return AdvancedRequests;
     });
+    const FruitRequests = useSelector(state=>{
+        let {FruitRequests} = state;
+        return FruitRequests;
+    })
+    const AdvancedFruitRequests = useSelector(state=>{
+        let {AdvancedFruitRequests} = state;
+        return AdvancedFruitRequests;
+    })
+    let REQuests,reQuests;
+    // if(FruitRequests&&FruitRequests.length){
+         REQuests= {..._requests};
+         reQuests ={...requests};
+         reQuests["FruitRequests"] = AdvancedFruitRequests;
+        REQuests["FruitRequests"] = FruitRequests;
+    // }
 return(
     <React.Fragment>
         <div className="dashboard_main_block">
         <div className="delivered_list_header">Todays Dashboard</div>
         <div className="cards_block">
-        <DashboardCards allRequests={_requests}/>
+        <DashboardCards allRequests={REQuests}/>
 
         </div>
         </div>
         <div className="dashboard_main_block">
         <div className="delivered_list_header">Tommorow Orders</div>
         <div className="cards_block">
-        <DashboardCards allRequests={requests}/>
+        <DashboardCards allRequests={reQuests}/>
 
         </div>
         </div>

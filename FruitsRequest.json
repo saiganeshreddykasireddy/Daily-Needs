@@ -1,0 +1,76 @@
+{
+    "FruitRequests":[
+        {
+            "Flat": "A 1208",
+            "Brand": "Mangoes",
+            "Quantity": 1,
+            "Price": 100
+        },
+        {
+            "Flat": "B 1208",
+            "Brand": "Mosambi",
+            "Quantity": 2,
+            "Price": 120
+        },
+        {
+            "Flat": "C 1208",
+            "Brand": "Sapota",
+            "Quantity": 1,
+            "Price": 40
+        },
+        {
+            "Flat": "D 1208",
+            "Brand": "Banana",
+            "Quantity": 2,
+            "Price": 52
+        },
+        {
+            "Flat": "E 1208",
+            "Brand": "Pappaya",
+            "Quantity": 2,
+            "Price": 56
+        },
+        {
+            "Flat": "F 1208",
+            "Brand": "Banana",
+            "Quantity": 1,
+            "Price": 26
+        },
+        {
+            "Flat": "A 1208",
+            "Brand": "Sapota",
+            "Quantity": 2,
+            "Price": 80
+        },
+        {
+            "Flat": "B 1208",
+            "Brand": "Mangoes",
+            "Quantity": 2,
+            "Price": 200
+        },
+        {
+            "Flat": "C 1208",
+            "Brand": "Sapota",
+            "Quantity": 2,
+            "Price": 80
+        },
+        {
+            "Flat": "D 1208",
+            "Brand": "Banana",
+            "Quantity": 2,
+            "Price": 52
+        },
+        {
+            "Flat": "E 1208",
+            "Brand": "Pappaya",
+            "Quantity": 2,
+            "Price": 56
+        },
+        {
+            "Flat": "F 1208",
+            "Brand": "Mangoes",
+            "Quantity": 3,
+            "Price": 300
+        }
+    ]
+}

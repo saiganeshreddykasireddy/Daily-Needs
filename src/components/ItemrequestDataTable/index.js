@@ -160,7 +160,7 @@ class ItemrequestDataTable extends Component {
         let updatedProducts = [...props.value];
         updatedProducts[props.rowIndex][props.field] = value;
         this.setState({ [`${productKey}`]: updatedProducts });
-        this.props.dispatch(editRequests(updatedProducts,requestsType));
+        // this.props.dispatch(editRequests(updatedProducts,requestsType));
 
     }
     inputTextEditor(productKey, props, field) {
@@ -216,13 +216,13 @@ class ItemrequestDataTable extends Component {
             const data = _.groupBy(requests, "Brand") || [];
             waterstockData.map((_items) => {
                 let firstKey = _items[0];
+                console.log()
                 if (Object.keys(data).indexOf(firstKey) >= 0) {
                     let count = data[firstKey];
                     let _count =0;
                     count.map((_Item)=>{
-                        _count = _count+_Item.Quantity;
+                        _count = _count+parseInt(_Item.Quantity);
                     })
-                  totalCount += data[firstKey].length;
                   finalData.push({ currentStatus: _items[1]- _count,Brand: firstKey, count: _count });
                 } else {
                   finalData.push({currentStatus: _items[1],
@@ -265,7 +265,7 @@ class ItemrequestDataTable extends Component {
                 <Button label="No" icon="pi pi-times" className="p-button-text nobtn" onClick={this.hideDeleteProductDialog} />
             </React.Fragment>
         );
-       
+        console.log(finalData,"finalData");
         return (
             <div className="datatable_water_Requests">
                 <div className="water_status_wrapper">

@@ -6,21 +6,20 @@ import { connect } from 'react-redux'
 
 // import "./style.scss";
 const ItemPriceList = [
-    { "Brand": "Eenadu", "Price": 6 },
-    { "Brand": "Sakshi", "Price": 7 },
-    { "Brand": "Hindu", "Price": 10 },
-    { "Brand": "Andhrajyothy", "Price": 2 },
-    { "Brand": "Times Of India", "Price": 8 },
-    { "Brand": "Economic Times", "Price": 10 },
-    { "Brand": "The Hindu", "Price": 9 }
+    { "Brand": "Mangoes", "Price": 100 },
+    { "Brand": "Mosambi", "Price": 60 },
+    { "Brand": "Sapota", "Price": 40 },
+    { "Brand": "Banana", "Price": 26 },
+    { "Brand": "Pappaya", "Price": 28 },
+   
 ];
 
 
-const PaperRequest = (props) => {
+const FruitRequests = (props) => {
 
-    const PaperRequests = useSelector(state => {
-        let { Requests: { PaperRequests } } = state;
-        return PaperRequests;
+    const FruitRequests = useSelector(state => {
+        let { FruitRequests} = state;
+        return FruitRequests;
     });
     const [ItemList, setItemList] = useState([]);
     useEffect(() => {
@@ -31,16 +30,16 @@ const PaperRequest = (props) => {
             })
         }
         setItemList(_ItemList);
-    }, [PaperRequests]);
+    }, [FruitRequests]);
     return (
         <div>
-            <ItemrequestDataTable key="FruitRequests" requests={PaperRequests} requestsType="PaperRequests" brandList={ItemList} ItemPriceList={ItemPriceList} />
+            <ItemrequestDataTable key="FruitRequests" requests={FruitRequests} requestsType="FruitRequests" brandList={ItemList} ItemPriceList={ItemPriceList} />
         </div>
     );
 
 }
 
-export default PaperRequest;
+export default FruitRequests;
 
 
 

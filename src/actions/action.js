@@ -24,7 +24,53 @@ export const getadvancedRequests = () => {
   }
 }
 
+export const getFruitRequests = () => {
+  return (dispatch) => {
+    let res = axios.get('http://localhost:3010/FruitRequests')
+      .then(res => {
+        dispatch({
+          type: 'FETCH_FRUITS_REQUESTS',
+          payload: res.data
+        });
+      })
+  }
+}
 
+export const getProductsList = () => {
+  return (dispatch) => {
+    let res = axios.get('http://localhost:3007/products')
+      .then(res => {
+        dispatch({
+          type: 'FETCH_PRODUCTS',
+          payload: res.data
+        });
+      })
+  }
+}
+
+export const getFlatsList = () => {
+  return (dispatch) => {
+    let res = axios.get('http://localhost:3006/FlatsList')
+      .then(res => {
+        dispatch({
+          type: 'FETCH_FLATS',
+          payload: res.data
+        });
+      })
+  }
+}
+
+export const getAdvancedFruitsList = () => {
+  return (dispatch) => {
+    let res = axios.get('http://localhost:3011/FruitRequests')
+      .then(res => {
+        dispatch({
+          type: 'FETCH_ADVANCED_FRUITS_REQUEST',
+          payload: res.data
+        });
+      })
+  }
+}
 
 //  export const postWaterRequests = (requests) => {
 //   return (dispatch) => {
@@ -107,17 +153,7 @@ export const addWaterRequest = (newdata,requestsType) => {
   }
 }
 
-export const getProductsList = () => {
-  return (dispatch) => {
-    let res = axios.get('http://localhost:3007/products')
-      .then(res => {
-        dispatch({
-          type: 'FETCH_PRODUCTS',
-          payload: res.data
-        });
-      })
-  }
-}
+
 
 export const editProductsList = (data) => {
   return (dispatch) => {
@@ -154,14 +190,3 @@ export const addNewProduct = (newdata) => {
   }
 }
 
-export const getFlatsList = () => {
-  return (dispatch) => {
-    let res = axios.get('http://localhost:3006/FlatsList')
-      .then(res => {
-        dispatch({
-          type: 'FETCH_FLATS',
-          payload: res.data
-        });
-      })
-  }
-}

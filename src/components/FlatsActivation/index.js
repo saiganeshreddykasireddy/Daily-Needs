@@ -20,11 +20,12 @@ class FlatsActivation extends Component {
             activecls: "",
             visible: true,
             deleteProductDialog: false,
-            newproductDialog: false
+            newproductDialog: false,
+            isOpenable:true
 
         }
         this.openeditDialog = this.openeditDialog.bind(this);
-
+        this.rowClick = this.rowClick.bind(this);
     }
     componentDidMount(props) {
         let { FlatsList } = this.props;
@@ -54,6 +55,7 @@ class FlatsActivation extends Component {
         return <Checkbox checked={rowdata.isActivated} onChange={() => { this.onSelectionChange(); }} />
     }
     rowClick = (data_key, e) => {
+        console.log(e);
         this.setState({
             showSubscriptionpage: true,
             visible: true,
@@ -249,6 +251,14 @@ class FlatsActivation extends Component {
 
         }) 
     }
+    onRowEditInit=()=>{
+this.setState({
+    isOpenable:false
+});
+    }
+    onRowEditCancel = ()=>{
+
+    }
     render() {
         const header = (
             <div className="table-header">
@@ -295,13 +305,14 @@ class FlatsActivation extends Component {
                     content="Flat"
                     dataKey="Flat"
                     onRowClick={(e) => this.rowClick("Flat", e)}
+                    
                     rows={18}
                     paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
                     globalFilter={this.state.globalFilter}
                     header={header}
                     editMode="row"
-                // onRowEditInit={this.onRowEditInit}
-                // onRowEditCancel={this.onRowEditCancel}
+                    onRowEditInit={this.onRowEditInit}
+                  onRowEditCancel={this.onRowEditCancel}
 
                 >
                     <Column header=""
@@ -315,7 +326,7 @@ class FlatsActivation extends Component {
                     ></Column>
                     <Column header="Edit" rowEditor headerStyle={{ width: '5rem' }} bodyStyle={{ textAlign: 'center' }}></Column>
                 </DataTable>
-                {this.state.showSubscriptionpage ? <Sidebar className="subscription_overlay" visible={this.state.visible} position="right" onHide={() => this.setState({ visible: false })}>
+                {this.state.showSubscriptionpage  ? <Sidebar className="subscription_overlay" visible={this.state.visible} position="right" onHide={() => this.setState({ visible: false })}>
                     {this.renderSubscriptionPage()}
                 </Sidebar> : ""}
                 <Dialog visible={this.state.productDialog} style={{ width: '450px' }} header=" Edit Subscribed Items" modal className="p-fluid editable_dialogs" footer={productDialogFooter} onHide={this.hideProductDialog}>
