@@ -54,7 +54,6 @@ class FlatsActivation extends Component {
         return <Checkbox checked={rowdata.isActivated} onChange={() => { this.onSelectionChange(); }} />
     }
     rowClick = (data_key, e) => {
-        console.log(e);
         this.setState({
             showSubscriptionpage: true,
             visible: true,

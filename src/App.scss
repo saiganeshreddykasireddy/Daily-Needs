@@ -1,4 +1,6 @@
 /* Place your extensions here to make migration to a new release easier. */
+@import "../node_modules/slick-carousel/slick/_slick.scss";
+@import "../node_modules/slick-carousel/slick/_slicktheme.scss";
 
 .layout-sidebar-dark{
     background: #262627;

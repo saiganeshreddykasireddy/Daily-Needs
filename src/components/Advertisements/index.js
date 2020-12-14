@@ -1,37 +1,31 @@
-import React, { Component } from 'react';
-import { FileUpload } from 'primereact/fileupload';
+import React, { useState } from 'react';
+import Uploadfiles from "./Advertisement";
+import { Button } from 'primereact/button';
+import AutoPlay from "./Preview";
+import "./style.scss";
+const Advertisements = () => {
 
- class Advertisements extends Component {
+    const [fileList, setFileList] = useState([
+    ]);
+    const [Label , setLabel] = useState("preview");
 
-    constructor(props) {
-        super(props);
-
-        this.onUpload = this.onUpload.bind(this);
-        this.onBasicUpload = this.onBasicUpload.bind(this);
-        this.onBasicUploadAuto = this.onBasicUploadAuto.bind(this);
+    const getData = (data) => {
+        setFileList(data);
+    }
+    const changeMode = () => {
+    let label = (Label == "preview") ? "Upload" :"preview";
+    setLabel(label);
     }
 
-    onUpload() {
-    }
-
-    onBasicUpload() {
-    }
-
-    onBasicUploadAuto(event) {
-        console.log(event.files);
-    }
-
-    render() {
-        return (
-            <div>
-\
-                <div className="card">
-                    
-                    <FileUpload mode="basic" name="demo[]"   maxFileSize={1000000} onUpload={this.onBasicUploadAuto}  chooseLabel="Browse"					multiple={true}
- />
-                </div>
+    return (
+        <React.Fragment>
+            <div className="advertisements_buttons">
+                <Button label={Label} onClick={changeMode} />
             </div>
-        )
-    }
-}
+           { (Label == "preview") ? <Uploadfiles getData={getData} /> :
+           <AutoPlay Data={fileList} /> }
+        </React.Fragment>
+    );
+};
+
 export default Advertisements;

@@ -214,26 +214,32 @@ class ItemrequestDataTable extends Component {
         let totalCount = 0;
         if(requestsType = "WaterRequests"){
             const data = _.groupBy(requests, "Brand") || [];
-
             waterstockData.map((_items) => {
                 let firstKey = _items[0];
                 if (Object.keys(data).indexOf(firstKey) >= 0) {
+                    let count = data[firstKey];
+                    let _count =0;
+                    count.map((_Item)=>{
+                        _count = _count+_Item.Quantity;
+                    })
                   totalCount += data[firstKey].length;
-                  finalData.push({ currentStatus: _items[1]- data[firstKey].length,Brand: _items[0], count: data[firstKey].length });
-          
+                  finalData.push({ currentStatus: _items[1]- _count,Brand: firstKey, count: _count });
                 } else {
                   finalData.push({currentStatus: _items[1],
                        Brand: _items[0], count: 0 });
                 }
               });
-         let _finalData = _.findIndex(finalData, function(o) { return o.currentStatus <= 10; });
-            if(_finalData >= 0){
-                
-               if(!this.state.isrendered){
-                let _isgettingoutofstock = finalData[_finalData].Brand;
-                  this.getToast(_isgettingoutofstock);
-               } 
+         let _finalData = _.filter(finalData, function(o) { return o.currentStatus <= 10; });
+            if(_finalData && _finalData.length){
+                if(!this.state.isrendered){
+
+                _finalData.map((_itemgettingoutostock=>{
+                    this.getToast(_itemgettingoutostock.Brand);
+
+                }))
             }
+               } 
+            
 
         }
        
