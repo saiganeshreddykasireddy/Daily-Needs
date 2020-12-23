@@ -1,6 +1,44 @@
 .Flats_Activation {
   width: 600px;
   margin-top: 5px;
+  .p-inputtext:enabled:focus {
+    border: 1px solid #a6a6a6 !important;
+    box-shadow: none !important;
+  }
+  .p-datatable-tbody > tr > td {
+    padding: 0.2em 0.857em !important;
+    .pi-pencil:before {
+      content: "\e942";
+      margin-left: -4px;
+    }
+    .p-checkbox .p-checkbox-box {
+      width: 15px;
+      height: 15px;
+      border-radius: 2px;
+      .p-highlight {
+        border-color: #13A9D4;
+        background-color: #13A9D4;
+        color: #ffffff;
+    }
+    .p-checkbox-icon {
+      font-size: 14px !important;
+  }
+    }
+  
+  }
+  input.p-inputtext.p-component {
+    font-size: 12px;
+    padding: 0.2em !important;
+  }
+  .p-row-editor-save.p-link,
+  .p-row-editor-cancel.p-link {
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 14px;
+    margin-right: 5px;
+    color: white;
+    padding-top: 1px;
+  }
   .p-datatable-header {
     padding: 0em !important;
     text-align: right !important;
@@ -66,7 +104,7 @@
   .p-col-12.left_container {
     text-align: center;
     margin-top: 25px;
-}
+  }
   .Subscriptionpage_profile {
     height: 36px;
     background: #023141 0% 0% no-repeat padding-box;
@@ -112,53 +150,53 @@
     color: #ffffffbf;
     font-size: 14px;
     font-weight: bold;
-    margin:15px 0px 10px 0px;
+    margin: 15px 0px 10px 0px;
   }
-  .items{
+  .items {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    img{
+    img {
       width: 100px;
-    height: 100px;
+      height: 100px;
     }
-    .product-list-item{
+    .product-list-item {
       width: 150px;
-    margin: 4px 0px 0px 10px;
-    .item_data {
-      color: #ffffff;
-      font-size: 12px;
-      font-weight: bold;
-      margin: 2px 0px 0px 10px;
-  }
-  .p-button.p-button-icon-only {
-    width: 1.6em;
-    height: 1.6em;
-    font-size: 12px;
-    margin: 5px 0px 0px 13px;
-}
-button.p-button.p-component.p-button-rounded.delete_icon.p-button-icon-only {
-  background-color: #e6154f;
-  border: 1px solid #e6154f;
-}
+      margin: 4px 0px 0px 10px;
+      .item_data {
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        margin: 2px 0px 0px 10px;
+      }
+      .p-button.p-button-icon-only {
+        width: 1.6em;
+        height: 1.6em;
+        font-size: 12px;
+        margin: 5px 0px 0px 13px;
+      }
+      button.p-button.p-component.p-button-rounded.delete_icon.p-button-icon-only {
+        background-color: #e6154f;
+        border: 1px solid #e6154f;
+      }
     }
   }
 }
 .p-button:enabled:focus {
-box-shadow: none !important;
+  box-shadow: none !important;
 }
-.editable_dialogs{
-  .p-field{
+.editable_dialogs {
+  .p-field {
     margin: 5px;
   }
-  .p-formgrid{
+  .p-formgrid {
     margin-top: 2px;
   }
-  .p-dialog-content{
+  .p-dialog-content {
     height: 80px;
     label {
       font-weight: bold;
-  }
+    }
     .p-inputtext {
       margin-top: 5px;
     }

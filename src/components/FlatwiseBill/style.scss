@@ -1,0 +1,31 @@
+#time_related_controls{
+    // width: 450px;
+    // margin: auto;
+    .ant-select-selection-placeholder {
+      font-size: 12px;
+    }
+    .ant-picker-input > input:placeholder-shown {
+        text-overflow: ellipsis;
+        font-size: 12px;
+    }
+    .formlabel{
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+form#time_related_controls {
+    width: 325px;
+    padding: 64px;
+    margin: auto;
+    border: 1px solid #d4d4d4;
+    background: #edf0f5;
+    button.ant-btn.ant-btn-primary {
+        margin: 5px 0px 0px 40px;
+    }
+  
+}
+.ant-picker-date-panel .ant-picker-content {
+    font-size: 11px;
+    font-weight: bold;
+    width: 252px;
+}

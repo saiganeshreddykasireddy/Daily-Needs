@@ -1,5 +1,13 @@
 import axios from 'axios';
-
+export const getAppInitialData = () => async dispatch => {
+  
+   dispatch(getFlatsList());
+   dispatch(getwaterRequests());
+   dispatch(getadvancedRequests());
+   dispatch(getFruitRequests());
+   dispatch(getProductsList());
+   dispatch(getAdvancedFruitsList());
+}
 export const getwaterRequests = () => {
   return (dispatch) => {
     let res = axios.get('http://localhost:3008/Requests')
@@ -35,7 +43,6 @@ export const getFruitRequests = () => {
       })
   }
 }
-
 export const getProductsList = () => {
   return (dispatch) => {
     let res = axios.get('http://localhost:3007/products')

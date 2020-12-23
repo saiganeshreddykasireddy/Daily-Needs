@@ -13,8 +13,9 @@ import FruitRequests from "./components/FruitRequest";
 import _ItemsList from "./components/ProductsList";
 import Advertisements from "./components/Advertisements";
 import _FlatsActivation from "./components/FlatsDetails";
+import FlatwiseBill from "./components/FlatwiseBill";
 import { ChartsDemo } from './components/ChartsDemo';
-import {getwaterRequests,getProductsList,getAdvancedFruitsList,getFruitRequests,getFlatsList,getadvancedRequests} from "./actions/action";
+import {getAppInitialData} from "./actions/action";
 import { connect } from 'react-redux'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -52,12 +53,7 @@ class App extends Component {
         this.createMenu();
     }
 componentDidMount(){
-this.props.dispatch(getwaterRequests());
-this.props.dispatch(getProductsList());
-this.props.dispatch(getFlatsList());
-this.props.dispatch(getadvancedRequests());
-this.props.dispatch(getFruitRequests());
-this.props.dispatch(getAdvancedFruitsList())
+this.props.dispatch(getAppInitialData());
 
 }
     onWrapperClick(event) {
@@ -128,7 +124,7 @@ this.props.dispatch(getAdvancedFruitsList())
                 label: 'Flats Activation', icon: 'pi pi-unlock', to:'/FlatsActivation'
             },
             {
-                label: 'Flat Wise Bill', icon: 'pi pi-money-bill', to:'/FlatWiseBill'
+                label: 'Flat Wise Bill', icon: 'pi pi-money-bill', to:'/FlatwiseBill'
             },
             {
                 label: 'Menu Colors', icon: 'pi pi-fw pi-align-left',
@@ -221,6 +217,8 @@ this.props.dispatch(getAdvancedFruitsList())
                     <Route path="/MilkRequest" component={MilkRequest} />
                     <Route path="/FlatsActivation" component={_FlatsActivation} />
                     <Route path="/FruitRequests" component={FruitRequests} />
+                    <Route path="/FlatwiseBill" component={FlatwiseBill} />
+
 
 
 

@@ -45,21 +45,36 @@ class ItemrequestDataTable extends Component {
         this.hideDeleteProductDialog = this.hideDeleteProductDialog.bind(this);
     }
     componentDidMount(props) {
-        let {requests,requestsType,ItemPriceList,brandList,waterstockData} = this.props;
+        let {requests,requestsType,ItemPriceList,brandList,waterstockData,FlatsList} = this.props;
+        let flatslist=[];
+            if(FlatsList && FlatsList.length){
+                FlatsList.map((_flatslist)=>{
+                    flatslist.push(_flatslist.Flat);
+                })
+            }
             this.setState({
             ItemRequests: requests,
             FlatsList: FlatsList,
             brandList:brandList,
             ItemPriceList:ItemPriceList,
             requestsType:requestsType,
-            waterstockData:waterstockData
+            waterstockData:waterstockData,
+            flatslist:flatslist
         })
     }
     componentWillReceiveProps(){
+        let {requests,requestsType,ItemPriceList,brandList,waterstockData,FlatsList} = this.props;
+        let flatslist=[];
+        if(FlatsList && FlatsList.length){
+            FlatsList.map((_flatslist)=>{
+                flatslist.push(_flatslist.Flat);
+            })
+        }
         this.setState({
             ItemRequests: this.props.requests,
             FlatsList: FlatsList,
             brandList:this.props.brandList,
+            flatslist:flatslist
         })
     }
     deleteWaterRequest() {
@@ -117,13 +132,14 @@ class ItemrequestDataTable extends Component {
     searchFlat = (event,field) => {
         setTimeout(() => {
             let suggestedFlats;
-                let fieldType  = (field == "Flat") ? [...this.state.FlatsList] : [...this.state.brandList];
+            console.log(this.state.flatslist);
+                let fieldType  = (field == "Flat") ? [...this.state.flatslist] : [...this.state.brandList];
             if (!event.query.trim().length) {
                 suggestedFlats = fieldType;
             }
             else {
                 suggestedFlats = fieldType.filter((country) => {
-                    return country.toLowerCase().startsWith(event.query.toLowerCase());
+                    return country.toLowerCase().startsWith(event.query);
                 });
             }
             this.setState({ suggestedFlats });
@@ -208,7 +224,7 @@ class ItemrequestDataTable extends Component {
     //     this.props.dispatch(updateRequest(updatedRequests))
     // }
     render() {
-        let {requests={},requestsType="",waterstockData=[]} = this.props;
+        let {requests={},requestsType="",waterstockData=[],FlatsList} = this.props;
         let finalData = [];
     
         let totalCount = 0;
@@ -329,9 +345,11 @@ class ItemrequestDataTable extends Component {
     }
 }
 const mapStateToProps = ({
-    Requests
+    Requests,
+    FlatsList
 }) => ({
-    Requests
+    Requests,
+    FlatsList
 })
 export default connect(mapStateToProps)(ItemrequestDataTable);
 

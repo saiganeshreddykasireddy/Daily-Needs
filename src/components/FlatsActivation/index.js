@@ -21,7 +21,7 @@ class FlatsActivation extends Component {
             visible: true,
             deleteProductDialog: false,
             newproductDialog: false,
-            isOpenable:true
+            isOpenable: true
 
         }
         this.openeditDialog = this.openeditDialog.bind(this);
@@ -51,15 +51,13 @@ class FlatsActivation extends Component {
             FlatsList: data
         });
     }
-    statusBodyTemplate = (rowdata) => {
-        return <Checkbox checked={rowdata.isActivated} onChange={() => { this.onSelectionChange(); }} />
-    }
-    rowClick = (data_key, e) => {
+   
+    rowClick = (e) => {
         console.log(e);
         this.setState({
             showSubscriptionpage: true,
             visible: true,
-            selectedFlatsubscriptionDetails: e.data
+            selectedFlatsubscriptionDetails: e
         })
     }
 
@@ -80,7 +78,6 @@ class FlatsActivation extends Component {
         let { selectedFlatsubscriptionDetails = {} } = this.state;
         let subscriptionData = selectedFlatsubscriptionDetails.subscriptionDetails || [];
         let _data = _.groupBy(subscriptionData, "Type") || {};
-        console.log(_data);
         return (
             <React.Fragment>
                 <div className="p-col-12 Subscriptionpage_profile">
@@ -154,12 +151,8 @@ class FlatsActivation extends Component {
     }
     onInputChange(e, name) {
         let val = "";
-        // if(name == "isAvailable"){
-        //      val = e.checked;
-        // }
-        // else{
+       
         val = parseInt(e.target.value) || e.target.value;
-        // }
         let { selectedFlatsubscriptionDetails = {} } = this.state;
         let subscriptionData = selectedFlatsubscriptionDetails.subscriptionDetails || [];
         let { editedRow } = this.state;
@@ -201,7 +194,6 @@ class FlatsActivation extends Component {
         })
     }
     addItemToSubscription = () => {
-
         let newRequest = {
             Brand: "",
             Price: "",
@@ -227,38 +219,59 @@ class FlatsActivation extends Component {
     }
     onnewInputChange = (e, name) => {
         let val = "";
-        // if(name == "isAvailable"){
-        //      val = e.checked;
-        // }
-        // if(name =="Price"){
-        // val = parseInt(e.target.value);
-        // }
-        // else{
         val = e.target.value;
-
-        // }
         let { selectedFlatsubscriptionDetails = {} } = this.state;
         let subscriptionData = selectedFlatsubscriptionDetails.subscriptionDetails || [];
         selectedFlatsubscriptionDetails.subscriptionDetails[selectedFlatsubscriptionDetails.subscriptionDetails.length - 1][`${name}`] = val;
-
         this.setState({
             selectedFlatsubscriptionDetails: selectedFlatsubscriptionDetails,
         });
     }
-    savenewProduct =()=>{
+    savenewProduct = () => {
         this.setState({
             newproductDialog: false
 
-        }) 
+        })
     }
-    onRowEditInit=()=>{
-this.setState({
-    isOpenable:false
-});
+    onRowEditInit = () => {
+        this.setState({
+            isOpenable: false
+        });
     }
-    onRowEditCancel = ()=>{
+    onRowEditCancel = () => {
 
     }
+    dateTemplate = (rowData, column) => {
+        return <div>
+            <div onClick={() => this.rowClick(rowData)}>{rowData.Flat}</div>
+        </div>;
+    }
+    onEditorValueChange(productKey, props, value) {
+        let updatedProducts;
+        if(productKey =="isActivated"){
+            props[productKey] = value;
+            updatedProducts = props[productKey];
+        }
+        else{
+            let updatedProducts = [...props.value];
+        updatedProducts[props.rowIndex][props.field] = value;
+
+        }
+        this.setState({ [`${productKey}`]: updatedProducts });
+    }
+    inputTextEditor(productKey, props, field) {
+        return <InputText type="text" value={props.rowData[field]} onChange={(e) => this.onEditorValueChange(productKey, props, e.target.value)} />;
+    }
+
+    brandEditor = (productKey, props) => {
+        return this.inputTextEditor(productKey, props, "mobile");
+    }
+    statusBodyTemplate = (productKey, props) => {
+        return <Checkbox checked={props.isActivated} 
+        onChange={(e) => this.onEditorValueChange(productKey, props, e.checked)} 
+        />
+    }
+
     render() {
         const header = (
             <div className="table-header">
@@ -298,35 +311,36 @@ this.setState({
 
                 </div>
                 <DataTable ref={(el) => this.dt = el} value={this.state.FlatsList}
-                    dataKey="id"
+                    dataKey="Flat"
                     className="Flats_Activation"
                     paginator={((this.state.FlatsList && this.state.FlatsList.length) > 18) ? true : false}
                     emptyMessage="No Flats Found"
                     content="Flat"
                     dataKey="Flat"
-                    onRowClick={(e) => this.rowClick("Flat", e)}
-                    
+                    // onRowClick={(e) => this.rowClick("Flat", e)}
+
                     rows={18}
                     paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
                     globalFilter={this.state.globalFilter}
                     header={header}
                     editMode="row"
                     onRowEditInit={this.onRowEditInit}
-                  onRowEditCancel={this.onRowEditCancel}
+                    onRowEditCancel={this.onRowEditCancel}
 
                 >
                     <Column header=""
-                        body={this.statusBodyTemplate}
+                        body={(props) =>this.statusBodyTemplate('isActivated', props)}
                         headerStyle={{ width: '5rem' }} bodyStyle={{ textAlign: 'center' }} ></Column>
                     <Column field="Flat" header="Flat" headerStyle={{ width: '10rem' }}
-                    // editor={(props) => this.flatNameEditor('WaterRequest', props)}
+                        // editor={(props) => this.flatNameEditor('WaterRequest', props)}
+                        body={this.dateTemplate}
                     ></Column>
                     <Column field="mobile" header="mobile"
-                    // editor={(props) => this.brandEditor('WaterRequest', props)}
+                        editor={(props) => this.brandEditor('mobile', props)}
                     ></Column>
                     <Column header="Edit" rowEditor headerStyle={{ width: '5rem' }} bodyStyle={{ textAlign: 'center' }}></Column>
                 </DataTable>
-                {this.state.showSubscriptionpage  ? <Sidebar className="subscription_overlay" visible={this.state.visible} position="right" onHide={() => this.setState({ visible: false })}>
+                {this.state.showSubscriptionpage ? <Sidebar className="subscription_overlay" visible={this.state.visible} position="right" onHide={() => this.setState({ visible: false })}>
                     {this.renderSubscriptionPage()}
                 </Sidebar> : ""}
                 <Dialog visible={this.state.productDialog} style={{ width: '450px' }} header=" Edit Subscribed Items" modal className="p-fluid editable_dialogs" footer={productDialogFooter} onHide={this.hideProductDialog}>
