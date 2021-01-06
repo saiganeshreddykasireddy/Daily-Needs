@@ -1,0 +1,88 @@
+{
+    "ExpenditureList": [
+        {
+            "Name": "Ganesh",
+            "Reason": "amul bill",
+            "Amount": 105,
+            "Date": "20/01/2021"
+        },
+        {
+            "Name": "Reddy",
+            "Reason": "Heritage bill",
+            "Amount": 100,
+            "Date": "23/01/2021"
+        },
+        {
+            "Name": "sai",
+            "Reason": "jersy bill",
+            "Amount": 500,
+            "Date": "2/01/2021"
+        },
+        {
+            "Name": "ravi",
+            "Reason": "vijaya bill",
+            "Amount": 10500,
+            "Date": "27/01/2021"
+        },
+        {
+            "Name": "kumar",
+            "Reason": "sid bill",
+            "Amount": 1500,
+            "Date": "29/01/2021"
+        },
+        {
+            "Name": "hiii",
+            "Reason": "hii bill",
+            "Amount": 1050,
+            "Date": "12/01/2021"
+        },
+        {
+            "Name": "byeeee",
+            "Reason": "byee bill",
+            "Amount": 1000,
+            "Date": "20/01/2021"
+        },
+        {
+            "Name": "syee",
+            "Reason": "syee bill",
+            "Amount": 10,
+            "Date": "20/01/2021"
+        },
+        {
+            "Name": "petrol",
+            "Reason": "petrol bill",
+            "Amount": 1100,
+            "Date": "22/01/2021"
+        },
+        {
+            "Name": "diesel",
+            "Reason": "diesel bill",
+            "Amount": 1050,
+            "Date": "23/01/2021"
+        },
+        {
+            "Name": "bisleri",
+            "Reason": "bisleri bill",
+            "Amount": 1050,
+            "Date": "11/02/2021"
+        },
+        {
+            "Name": "kinley",
+            "Reason": "kinley bill",
+            "Amount": 1000,
+            "Date": "20/02/2021"
+        },
+        {
+            "Name": "aquapure",
+            "Reason": "aquapure bill",
+            "Amount": 10500,
+            "Date": "26/01/2021"
+        },
+        {
+            "Name": "bailey",
+            "Reason": "bailey bill",
+            "Amount": 10500,
+            "Date": "20/01/2021"
+        }
+    ]
+}

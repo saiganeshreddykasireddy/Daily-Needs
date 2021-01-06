@@ -6,7 +6,6 @@ import "./Dashboard.scss";
 
  const DashboardCards = (props) => {
    let {allRequests} = props;
-   console.log(allRequests);
    
     let itemTypes = Object.keys(allRequests) || {};
     return itemTypes.map((key) => {

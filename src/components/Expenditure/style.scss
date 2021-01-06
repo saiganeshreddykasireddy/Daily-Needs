@@ -1,0 +1,99 @@
+.expenditurepage{
+    td{
+        padding-left: 70px !important;
+    }
+    .table-header {
+        display: flex;
+        align-items: center;
+        .left_container {
+          display: flex;
+          justify-content: flex-start;
+          .p-button-success.p-mr-2.p-button-text-icon-left {
+            margin-right: 10px;
+          }
+        }
+        .Right_container {
+          display: flex;
+          justify-content: flex-end;
+          input.p-inputtext.p-component {
+            width: 175px;
+            font-size: 12px;
+            padding: 0.329em;
+          }
+
+          i.pi.pi-search {
+            position: relative;
+            font-size: 1.15em;
+            right: 1.3em;
+            top: 2px;
+          }
+        }
+      }
+    .p-dialog-titlebar{
+        // width: 640px;
+            height: 46px;
+            border-radius: 8px 8px 0px 0px;
+            opacity: 1;
+            border:none;
+            background-color: #627484 !important;
+            border-bottom: none;    
+            color:#fcf8f8 !important;
+            border:none !important;
+        }
+        .p-dialog-titlebar-close-icon{
+          color:#fcf8f8 !important;
+        }
+        .p-link:focus {
+            box-shadow: none;
+            color:#fcf8f8 !important;
+          }
+        span.p-dialog-title{
+            float: left;
+           
+        }
+        .p-dialog-content{
+            border: none !important;
+            display: flex;
+            align-items: center;
+          }
+.p-dialog-footer{
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 0px 7px 7px;
+    border: none !important;
+  .p-button{
+    width: 90px !important;
+    height: 30px;
+    border-radius: 2px;
+    opacity: 1;
+    padding: none !important;
+    margin: 0px 10px;
+    border: none;
+    color: #ffff;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  }
+    .nobtn{
+       background-color: #484848 !important;
+    }
+    .yesbtn{
+      background-color: #4b757c !important;
+    }
+    .p-fluid {
+        width: 100%;
+    }
+    label{
+        font-weight: bold;
+        opacity: 0.9;
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .p-field {
+        margin: 8px;
+        input{
+            height: 30px;
+        }
+    }
+}

@@ -33,7 +33,6 @@ const Uploadfiles = (props) => {
         listType="picture-card"
         fileList={fileList}
         onChange={onChange}
-        accept=".png"
 
       >
         {fileList.length < 100 && '+ Upload'}

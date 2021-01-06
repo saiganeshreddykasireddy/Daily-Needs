@@ -1,5 +1,9 @@
 .datatable_water_Requests {
-  
+  input.p-inputtext.p-component.p-column-filter {
+    height: 25px;
+    font-size: 11px !important;
+    opacity: 0.8;
+}
     .water_status_wrapper {
       display: flex;
       justify-content: center;

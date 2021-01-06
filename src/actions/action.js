@@ -7,6 +7,7 @@ export const getAppInitialData = () => async dispatch => {
    dispatch(getFruitRequests());
    dispatch(getProductsList());
    dispatch(getAdvancedFruitsList());
+   dispatch(getexpenditureList());
 }
 export const getwaterRequests = () => {
   return (dispatch) => {
@@ -78,7 +79,17 @@ export const getAdvancedFruitsList = () => {
       })
   }
 }
-
+export const getexpenditureList = () => {
+  return (dispatch) => {
+    let res = axios.get('http://localhost:3012/ExpenditureList')
+      .then(res => {
+        dispatch({
+          type: 'FETCH_EXPENDITURE_LIST',
+          payload: res.data
+        });
+      })
+  }
+}
 //  export const postWaterRequests = (requests) => {
 //   return (dispatch) => {
 //     let res = axios.post('http://localhost:3008/Requests',{

@@ -14,6 +14,7 @@ import _ItemsList from "./components/ProductsList";
 import Advertisements from "./components/Advertisements";
 import _FlatsActivation from "./components/FlatsDetails";
 import FlatwiseBill from "./components/FlatwiseBill";
+import Expenditure from "./components/ExpenditureMain.js";
 import { ChartsDemo } from './components/ChartsDemo';
 import {getAppInitialData} from "./actions/action";
 import { connect } from 'react-redux'
@@ -149,7 +150,7 @@ this.props.dispatch(getAppInitialData());
                 ]
             },
             {
-                label: 'Subscription Details', icon: 'pi pi-tags', to:'/SubscriptionDetails'
+                label: 'Expenditures ', icon: 'pi pi-money-bill', to:'/Expenditures'
             },
 
         ];
@@ -218,9 +219,10 @@ this.props.dispatch(getAppInitialData());
                     <Route path="/FlatsActivation" component={_FlatsActivation} />
                     <Route path="/FruitRequests" component={FruitRequests} />
                     <Route path="/FlatwiseBill" component={FlatwiseBill} />
+                    <Route path="/Expenditures" component={Expenditure} />
 
 
-
+                    
 
 
                 </div>

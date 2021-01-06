@@ -1,6 +1,9 @@
 .Flats_Activation {
   width: 600px;
   margin-top: 5px;
+   .p-checkbox .p-checkbox-box:not(.p-disabled).p-focus{
+     box-shadow: none !important;
+   }
   .p-inputtext:enabled:focus {
     border: 1px solid #a6a6a6 !important;
     box-shadow: none !important;
