@@ -42,14 +42,14 @@ class ItemrequestDataTable extends Component {
         
         this.originalRows = {};
         this.onRowEditInit = this.onRowEditInit.bind(this);
-        this.handleClick = this.handleClick.bind(this);
+        // this.handleClick = this.handleClick.bind(this);
         this.onRowEditCancel = this.onRowEditCancel.bind(this);
         this.flatNameEditor = this.flatNameEditor.bind(this);
         this.onRowReorder = this.onRowReorder.bind(this);
         this.addNewRequest = this.addNewRequest.bind(this);
         this.actionBodyTemplate = this.actionBodyTemplate.bind(this);
         this.deleteWaterRequest = this.deleteWaterRequest.bind(this);
-        this.printPdf = this.printPdf.bind(this);
+        // this.printPdf = this.printPdf.bind(this);
         this.hideDeleteProductDialog = this.hideDeleteProductDialog.bind(this);
     }
     componentDidMount(props) {
@@ -96,7 +96,8 @@ class ItemrequestDataTable extends Component {
             ItemRequests: ItemRequests,
             deleteProductDialog: false,
             rowdata: {},
-            isrendered: true
+            isrendered: true,
+            first:0
         });
     }
     hideDeleteProductDialog() {
@@ -120,10 +121,12 @@ class ItemrequestDataTable extends Component {
         };
         let updatedRequests = [...this.state.ItemRequests];
         updatedRequests.push(newRequest);
+        let movetolastpage = parseInt(updatedRequests.length / 13);
         this.props.dispatch(addWaterRequest(newRequest, requestsType));
         this.setState({
             ItemRequests: updatedRequests,
-            isrendered: true
+            isrendered: true,
+            // first :movetolastpage
         });
     }
     
@@ -157,42 +160,6 @@ class ItemrequestDataTable extends Component {
     statusBodyTemplate = (rowData) => {
         return <Button icon="pi pi-home" className="p-button-rounded  delivery_icon" onClick={() => this.waterDelivered(rowData)} />
     }
-  
-    handleClick(event) {  // switch the value of the showModal state
-        this.setState({
-            showModal: !this.state.showModal
-        });
-      }
-    printPdf=()=>{
-        // this.setState({
-        //     isPrint:true
-        // });
-        
-            if (this.state.showModal) {
-        return <Datatablecontent {...this.state} isPrint= {true} key="pdf"/>;
-            }
-            else{
-                return null;
-            }
-        // const string = renderToString(<Prints{...this.state}/>);
-        // const pdf = new jsPDF("p", "mm", "a4");
-        // // pdf.fromHTML(string);
-        // // string.print();
-        // // );
-
-        // pdf.setFontSize(16);
-        // pdf.setTextColor(0, 255, 0);
-        // pdf.html(string, {
-        //     callback: function () {
-        //         pdf.save('myDocument.pdf');
-        //         // window.open(pdf.output('bloburl')); // To debug.
-        //     }
-        // });
-        
-        // fromHTML
-        // pdf.autoTable({Prints});
-        // pdf.save('pdf')
-    }
      
     onRowEditInit(event) {
         this.originalRows[event.index] = { ...this.state.ItemRequests[event.index] };
@@ -222,9 +189,11 @@ class ItemrequestDataTable extends Component {
         else {
             let price;
             let { ItemPriceList } = this.state;
-            let _value = _.filter(ItemPriceList, { 'Brand': props.rowData.Brand });
+            let _value = _.filter(ItemPriceList, { 'Brand': props.rowData.Brand }) || {};
             if (!props.rowData.isNewlyadded) {
-                props.rowData[field] = _value[0].Price * props.rowData.Quantity || null;
+                if(_value[0]){
+                    props.rowData[field] = _value[0].Price * props.rowData.Quantity || null;
+                }
             }
             else {
                 if (_value && _value[0] && _value[0].Brand) {
@@ -259,6 +228,9 @@ class ItemrequestDataTable extends Component {
     //     let updatedRequests = [...this.state.ItemRequests];
     //     this.props.dispatch(updateRequest(updatedRequests))
     // }
+    filteredText = (value, filter)=>{
+        console.log(value, filter,"hiiii");
+    }
     render() {
         let { requests = {}, requestsType = "", waterstockData = [], FlatsList } = this.props;
         let finalData = [];
@@ -297,18 +269,19 @@ class ItemrequestDataTable extends Component {
 
         }
 
-
+const searchFilter = <InputText type="search" onInput={(e) => this.setState({ globalFilter: e.target.value })} placeholder="Search..." />;
         const header = (
             <div className="table-header">
                 <div className="p-col-6 left_container">
                     <Button label="Add" icon="pi pi-plus" className="p-button-success p-mr-2" onClick={this.addNewRequest} />
-                    <Button type="button" icon="pi pi-external-link" label="Print" onClick={this.handleClick}></Button>
-                    {this.printPdf}
+                    {/* <Button type="button" icon="pi pi-external-link" label="Print" onClick={this.handleClick}></Button> */}
+                    {/* {this.printPdf} */}
+                    <Datatablecontent {...this.state} isPrint= {true} key="pdf"/>
                 </div>
                 <div className="p-col-6 Right_container">
                     <span className="p-input-icon-left">
-                        {/* <InputText type="search" onInput={(e) => this.setState({ globalFilter: e.target.value })} placeholder="Search..." /> */}
-                        {/* <i className="pi pi-search" /> */}
+                        <InputText type="search" onInput={(e) => this.setState({ globalFilter: e.target.value })} placeholder="Search by Block..." />
+                       <i className="pi pi-search" />
                     </span>
                 </div>
             </div>
@@ -354,7 +327,8 @@ class ItemrequestDataTable extends Component {
                         first={(this.state.ItemRequests && this.state.ItemRequests.length > 13) ? this.state.first : 0}
                         onPage={(e) => this.setState({ first: e.first })}
                         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
-                        // globalFilter={this.state.globalFilter}
+                        globalFilter={this.state.globalFilter}
+                        excludeGlobalFilter
                         header={header}
                         editMode="row"
                         emptyMessage="No Orders Found"
@@ -362,13 +336,15 @@ class ItemrequestDataTable extends Component {
                         onRowEditCancel={this.onRowEditCancel}
                         reorderableColumns
                         onRowReorder={this.onRowReorder}
+                     
                     >
                         <Column rowReorder style={{ width: '3em' }} />
-                        <Column field="Flat" header="Flat Num" sortable filter filterPlaceholder="Search by Block"  editor={(props) => this.flatNameEditor('WaterRequest', props)}></Column>
-                        <Column field="Brand" header="Brand" sortable  filter  filterPlaceholder="Search by Brand" editor={(props) => this.brandEditor('WaterRequest', props)}></Column>
-                        <Column field="Quantity" header="Quantity" sortable editor={(props) => this.quantityEditor('WaterRequest', props)}></Column>
-                        <Column field="Price" header="Price" sortable editor={(props) => this.priceEditor('WaterRequest', props)}></Column>
-                        <Column header="Edit" rowEditor headerStyle={{ width: '5rem' }} bodyStyle={{ textAlign: 'center' }}></Column>
+                        <Column field="Flat" header="Flat Num" sortable  editor={(props) => this.flatNameEditor('WaterRequest', props)}                         sortMode="single"
+></Column>
+                        <Column field="Brand" excludeGlobalFilter header="Brand" sortable   editor={(props) => this.brandEditor('WaterRequest', props)}></Column>
+                        <Column field="Quantity" excludeGlobalFilter header="Quantity" sortable editor={(props) => this.quantityEditor('WaterRequest', props)}></Column>
+                        <Column field="Price" header="Price"excludeGlobalFilter sortable editor={(props) => this.priceEditor('WaterRequest', props)}></Column>
+                        <Column header="Edit" excludeGlobalFilter rowEditor headerStyle={{ width: '5rem' }} bodyStyle={{ textAlign: 'center' }}></Column>
                         <Column header="Delete" body={this.actionBodyTemplate} headerStyle={{ width: '5rem' }} bodyStyle={{ textAlign: 'center' }} ></Column>
                         <Column header="Status" body={this.statusBodyTemplate} headerStyle={{ width: '5rem' }} bodyStyle={{ textAlign: 'center' }} ></Column>
                     </DataTable>
@@ -377,6 +353,7 @@ class ItemrequestDataTable extends Component {
                             {this.state.rowdata ? <span><b>Are you sure you want to delete</b> <b>{this.state.rowdata.Flat}</b><b>'s  </b><b>{this.props.requestsType}</b> <b>  ?</b></span> : ""}
                         </div>
                     </Dialog>
+                    {/* {this.state.showModal ?  <Datatablecontent {...this.state} isPrint= {true} key="pdf"/> : ""} */}
                 </div>
             </div>
         );

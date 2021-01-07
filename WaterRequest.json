@@ -38,6 +38,402 @@
                 "Price": 40
             },
             {
+                "Flat": "A 108",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "B 108",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "C 108",
+                "Brand": "Bailey",
+                "Quantity": 2,
+                "Price": 100
+            },
+            {
+                "Flat": "D 108",
+                "Brand": "Bisleri",
+                "Quantity": 2,
+                "Price": 200
+            },
+            {
+                "Flat": "E 1208",
+                "Brand": "Bisleri",
+                "Quantity": 2,
+                "Price": 200
+            },
+            {
+                "Flat": "F 1208",
+                "Brand": "Bailey",
+                "Quantity": 1,
+                "Price": 50
+            },
+            {
+                "Flat": "A 128",
+                "Brand": "Kinley",
+                "Quantity": 2,
+                "Price": 140
+            },
+            {
+                "Flat": "B 1208",
+                "Brand": "Kinley",
+                "Quantity": 2,
+                "Price": 140
+            },
+            {
+                "Flat": "C 1208",
+                "Brand": "Kinley",
+                "Quantity": 1,
+                "Price": 70
+            },
+            {
+                "Flat": "D 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "E 1208",
+                "Brand": "Aquapure",
+                "Quantity": 1,
+                "Price": 40
+            },
+            {
+                "Flat": "F 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "D 1208",
+                "Brand": "Bisleri",
+                "Quantity": 2,
+                "Price": 200
+            },
+            {
+                "Flat": "E 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "F 1208",
+                "Brand": "Aquapure",
+                "Quantity": 1,
+                "Price": 40
+            },
+            {
+                "Flat": "A 208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "B 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "C 1208",
+                "Brand": "Bailey",
+                "Quantity": 2,
+                "Price": 100
+            },
+            {
+                "Flat": "D 1208",
+                "Brand": "Bisleri",
+                "Quantity": 2,
+                "Price": 200
+            },
+            {
+                "Flat": "E 1208",
+                "Brand": "Bisleri",
+                "Quantity": 2,
+                "Price": 200
+            },
+            {
+                "Flat": "F 1208",
+                "Brand": "Bailey",
+                "Quantity": 1,
+                "Price": 50
+            },
+            {
+                "Flat": "A 405",
+                "Brand": "Kinley",
+                "Quantity": 2,
+                "Price": 140
+            },
+            {
+                "Flat": "B 1208",
+                "Brand": "Kinley",
+                "Quantity": 2,
+                "Price": 140
+            },
+            {
+                "Flat": "C 1208",
+                "Brand": "Kinley",
+                "Quantity": 1,
+                "Price": 70
+            },
+            {
+                "Flat": "D 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "E 1208",
+                "Brand": "Aquapure",
+                "Quantity": 1,
+                "Price": 40
+            },
+            {
+                "Flat": "F 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "D 1208",
+                "Brand": "Bisleri",
+                "Quantity": 2,
+                "Price": 200
+            },
+            {
+                "Flat": "E 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "F 1208",
+                "Brand": "Aquapure",
+                "Quantity": 1,
+                "Price": 40
+            },
+            {
+                "Flat": "A 608",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "B 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "C 1208",
+                "Brand": "Bailey",
+                "Quantity": 2,
+                "Price": 100
+            },
+            {
+                "Flat": "D 1208",
+                "Brand": "Bisleri",
+                "Quantity": 2,
+                "Price": 200
+            },
+            {
+                "Flat": "E 1208",
+                "Brand": "Bisleri",
+                "Quantity": 2,
+                "Price": 200
+            },
+            {
+                "Flat": "F 1208",
+                "Brand": "Bailey",
+                "Quantity": 1,
+                "Price": 50
+            },
+            {
+                "Flat": "A 807",
+                "Brand": "Kinley",
+                "Quantity": 2,
+                "Price": 140
+            },
+            {
+                "Flat": "B 1208",
+                "Brand": "Kinley",
+                "Quantity": 2,
+                "Price": 140
+            },
+            {
+                "Flat": "C 1208",
+                "Brand": "Kinley",
+                "Quantity": 1,
+                "Price": 70
+            },
+            {
+                "Flat": "D 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "E 1208",
+                "Brand": "Aquapure",
+                "Quantity": 1,
+                "Price": 40
+            },
+            {
+                "Flat": "F 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "A 901",
+                "Brand": "Bisleri",
+                "Quantity": 1,
+                "Price": 100
+            },
+            {
+                "Flat": "B 1208",
+                "Brand": "Kinley",
+                "Quantity": 1,
+                "Price": 70
+            },
+            {
+                "Flat": "C 1208",
+                "Brand": "Kinley",
+                "Quantity": 1,
+                "Price": 70
+            },
+            {
+                "Flat": "D 1208",
+                "Brand": "Bisleri",
+                "Quantity": 2,
+                "Price": 200
+            },
+            {
+                "Flat": "E 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "F 1208",
+                "Brand": "Aquapure",
+                "Quantity": 1,
+                "Price": 40
+            },
+            {
+                "Flat": "A 904",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "B 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "C 1208",
+                "Brand": "Bailey",
+                "Quantity": 2,
+                "Price": 100
+            },
+            {
+                "Flat": "D 1208",
+                "Brand": "Bisleri",
+                "Quantity": 2,
+                "Price": 200
+            },
+            {
+                "Flat": "E 1208",
+                "Brand": "Bisleri",
+                "Quantity": 2,
+                "Price": 200
+            },
+            {
+                "Flat": "F 1208",
+                "Brand": "Bailey",
+                "Quantity": 1,
+                "Price": 50
+            },
+            {
+                "Flat": "A 1108",
+                "Brand": "Kinley",
+                "Quantity": 2,
+                "Price": 140
+            },
+            {
+                "Flat": "B 1208",
+                "Brand": "Kinley",
+                "Quantity": 2,
+                "Price": 140
+            },
+            {
+                "Flat": "C 1208",
+                "Brand": "Kinley",
+                "Quantity": 1,
+                "Price": 70
+            },
+            {
+                "Flat": "D 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "E 1208",
+                "Brand": "Aquapure",
+                "Quantity": 1,
+                "Price": 40
+            },
+            {
+                "Flat": "F 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "A 1208",
+                "Brand": "Bisleri",
+                "Quantity": 1,
+                "Price": 100
+            },
+            {
+                "Flat": "B 1208",
+                "Brand": "Kinley",
+                "Quantity": 1,
+                "Price": 70
+            },
+            {
+                "Flat": "C 1208",
+                "Brand": "Kinley",
+                "Quantity": 1,
+                "Price": 70
+            },
+            {
+                "Flat": "D 1208",
+                "Brand": "Bisleri",
+                "Quantity": 2,
+                "Price": 200
+            },
+            {
+                "Flat": "E 1208",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "F 1208",
+                "Brand": "Aquapure",
+                "Quantity": 1,
+                "Price": 40
+            },
+            {
                 "Flat": "A 1208",
                 "Brand": "Aquapure",
                 "Quantity": 2,
@@ -74,7 +470,7 @@
                 "Price": 50
             },
             {
-                "Flat": "A 1208",
+                "Flat": "A 108",
                 "Brand": "Kinley",
                 "Quantity": 2,
                 "Price": 140
@@ -108,399 +504,163 @@
                 "Brand": "Aquapure",
                 "Quantity": 2,
                 "Price": 80
-            },
-            {
-                "Flat": "D 1208",
-                "Brand": "Bisleri",
-                "Quantity": 2,
-                "Price": 200
-            },
-            {
-                "Flat": "E 1208",
-                "Brand": "Aquapure",
-                "Quantity": 2,
-                "Price": 80
-            },
-            {
-                "Flat": "F 1208",
-                "Brand": "Aquapure",
-                "Quantity": 1,
-                "Price": 40
-            },
-            {
-                "Flat": "A 1208",
-                "Brand": "Aquapure",
-                "Quantity": 2,
-                "Price": 80
-            },
-            {
-                "Flat": "B 1208",
-                "Brand": "Aquapure",
-                "Quantity": 2,
-                "Price": 80
-            },
-            {
-                "Flat": "C 1208",
-                "Brand": "Bailey",
-                "Quantity": 2,
-                "Price": 100
-            },
-            {
-                "Flat": "D 1208",
-                "Brand": "Bisleri",
-                "Quantity": 2,
-                "Price": 200
-            },
-            {
-                "Flat": "E 1208",
-                "Brand": "Bisleri",
-                "Quantity": 2,
-                "Price": 200
-            },
-            {
-                "Flat": "F 1208",
-                "Brand": "Bailey",
-                "Quantity": 1,
-                "Price": 50
-            },
-            {
-                "Flat": "A 1208",
+            },{
+                "Flat": "A 101",
                 "Brand": "Kinley",
                 "Quantity": 2,
                 "Price": 140
             },
             {
-                "Flat": "B 1208",
+                "Flat": "A 204",
                 "Brand": "Kinley",
-                "Quantity": 2,
-                "Price": 140
+                "Quantity": 1,
+                "Price":70
             },
             {
-                "Flat": "C 1208",
+                "Flat": "A 207",
                 "Brand": "Kinley",
                 "Quantity": 1,
                 "Price": 70
             },
             {
-                "Flat": "D 1208",
+                "Flat": "A 302",
                 "Brand": "Aquapure",
                 "Quantity": 2,
                 "Price": 80
             },
             {
-                "Flat": "E 1208",
+                "Flat": "A 305",
                 "Brand": "Aquapure",
                 "Quantity": 1,
                 "Price": 40
             },
             {
-                "Flat": "F 1208",
+                "Flat": "A 404",
                 "Brand": "Aquapure",
                 "Quantity": 2,
                 "Price": 80
-            },
-            {
-                "Flat": "D 1208",
-                "Brand": "Bisleri",
-                "Quantity": 2,
-                "Price": 200
-            },
-            {
-                "Flat": "E 1208",
-                "Brand": "Aquapure",
-                "Quantity": 2,
-                "Price": 80
-            },
-            {
-                "Flat": "F 1208",
-                "Brand": "Aquapure",
-                "Quantity": 1,
-                "Price": 40
-            },
-            {
-                "Flat": "A 1208",
-                "Brand": "Aquapure",
-                "Quantity": 2,
-                "Price": 80
-            },
-            {
-                "Flat": "B 1208",
-                "Brand": "Aquapure",
-                "Quantity": 2,
-                "Price": 80
-            },
-            {
-                "Flat": "C 1208",
-                "Brand": "Bailey",
-                "Quantity": 2,
-                "Price": 100
-            },
-            {
-                "Flat": "D 1208",
-                "Brand": "Bisleri",
-                "Quantity": 2,
-                "Price": 200
-            },
-            {
-                "Flat": "E 1208",
-                "Brand": "Bisleri",
-                "Quantity": 2,
-                "Price": 200
-            },
-            {
-                "Flat": "F 1208",
-                "Brand": "Bailey",
-                "Quantity": 1,
-                "Price": 50
-            },
-            {
-                "Flat": "A 1208",
+            },{
+                "Flat": "A 503",
                 "Brand": "Kinley",
                 "Quantity": 2,
                 "Price": 140
             },
             {
-                "Flat": "B 1208",
+                "Flat": "A 601",
                 "Brand": "Kinley",
                 "Quantity": 2,
                 "Price": 140
             },
             {
-                "Flat": "C 1208",
+                "Flat": "A 609",
                 "Brand": "Kinley",
                 "Quantity": 1,
                 "Price": 70
             },
             {
-                "Flat": "D 1208",
+                "Flat": "A 704",
                 "Brand": "Aquapure",
                 "Quantity": 2,
                 "Price": 80
             },
             {
-                "Flat": "E 1208",
+                "Flat": "A 707",
                 "Brand": "Aquapure",
                 "Quantity": 1,
                 "Price": 40
             },
             {
-                "Flat": "F 1208",
+                "Flat": "A 804",
                 "Brand": "Aquapure",
                 "Quantity": 2,
                 "Price": 80
             },
             {
-                "Flat": "A 1208",
-                "Brand": "Bisleri",
-                "Quantity": 1,
-                "Price": 100
-            },
-            {
-                "Flat": "B 1208",
-                "Brand": "Kinley",
-                "Quantity": 1,
-                "Price": 70
-            },
-            {
-                "Flat": "C 1208",
-                "Brand": "Kinley",
-                "Quantity": 1,
-                "Price": 70
-            },
-            {
-                "Flat": "D 1208",
-                "Brand": "Bisleri",
-                "Quantity": 2,
-                "Price": 200
-            },
-            {
-                "Flat": "E 1208",
+                "Flat": "A 706",
                 "Brand": "Aquapure",
                 "Quantity": 2,
                 "Price": 80
             },
             {
-                "Flat": "F 1208",
+                "Flat": "A 709",
                 "Brand": "Aquapure",
                 "Quantity": 1,
                 "Price": 40
             },
             {
-                "Flat": "A 1208",
+                "Flat": "A 803",
                 "Brand": "Aquapure",
                 "Quantity": 2,
                 "Price": 80
             },
             {
-                "Flat": "B 1208",
+                "Flat": "A 701",
                 "Brand": "Aquapure",
                 "Quantity": 2,
                 "Price": 80
             },
             {
-                "Flat": "C 1208",
-                "Brand": "Bailey",
-                "Quantity": 2,
-                "Price": 100
-            },
-            {
-                "Flat": "D 1208",
-                "Brand": "Bisleri",
-                "Quantity": 2,
-                "Price": 200
-            },
-            {
-                "Flat": "E 1208",
-                "Brand": "Bisleri",
-                "Quantity": 2,
-                "Price": 200
-            },
-            {
-                "Flat": "F 1208",
-                "Brand": "Bailey",
-                "Quantity": 1,
-                "Price": 50
-            },
-            {
-                "Flat": "A 1208",
-                "Brand": "Kinley",
-                "Quantity": 2,
-                "Price": 140
-            },
-            {
-                "Flat": "B 1208",
-                "Brand": "Kinley",
-                "Quantity": 2,
-                "Price": 140
-            },
-            {
-                "Flat": "C 1208",
-                "Brand": "Kinley",
-                "Quantity": 1,
-                "Price": 70
-            },
-            {
-                "Flat": "D 1208",
-                "Brand": "Aquapure",
-                "Quantity": 2,
-                "Price": 80
-            },
-            {
-                "Flat": "E 1208",
+                "Flat": "A 705",
                 "Brand": "Aquapure",
                 "Quantity": 1,
                 "Price": 40
             },
             {
-                "Flat": "F 1208",
+                "Flat": "A 803",
                 "Brand": "Aquapure",
                 "Quantity": 2,
                 "Price": 80
             },
             {
-                "Flat": "A 1208",
-                "Brand": "Bisleri",
-                "Quantity": 1,
-                "Price": 100
-            },
-            {
-                "Flat": "B 1208",
-                "Brand": "Kinley",
-                "Quantity": 1,
-                "Price": 70
-            },
-            {
-                "Flat": "C 1208",
-                "Brand": "Kinley",
-                "Quantity": 1,
-                "Price": 70
-            },
-            {
-                "Flat": "D 1208",
-                "Brand": "Bisleri",
-                "Quantity": 2,
-                "Price": 200
-            },
-            {
-                "Flat": "E 1208",
+                "Flat": "A 702",
                 "Brand": "Aquapure",
                 "Quantity": 2,
                 "Price": 80
             },
             {
-                "Flat": "F 1208",
+                "Flat": "A 807",
                 "Brand": "Aquapure",
                 "Quantity": 1,
                 "Price": 40
             },
             {
-                "Flat": "A 1208",
+                "Flat": "A 809",
                 "Brand": "Aquapure",
                 "Quantity": 2,
                 "Price": 80
             },
             {
-                "Flat": "B 1208",
+                "Flat": "A 904",
                 "Brand": "Aquapure",
                 "Quantity": 2,
                 "Price": 80
             },
             {
-                "Flat": "C 1208",
-                "Brand": "Bailey",
-                "Quantity": 2,
-                "Price": 100
-            },
-            {
-                "Flat": "D 1208",
-                "Brand": "Bisleri",
-                "Quantity": 2,
-                "Price": 200
-            },
-            {
-                "Flat": "E 1208",
-                "Brand": "Bisleri",
-                "Quantity": 2,
-                "Price": 200
-            },
-            {
-                "Flat": "F 1208",
-                "Brand": "Bailey",
-                "Quantity": 1,
-                "Price": 50
-            },
-            {
-                "Flat": "A 1208",
-                "Brand": "Kinley",
-                "Quantity": 2,
-                "Price": 140
-            },
-            {
-                "Flat": "B 1208",
-                "Brand": "Kinley",
-                "Quantity": 2,
-                "Price": 140
-            },
-            {
-                "Flat": "C 1208",
-                "Brand": "Kinley",
-                "Quantity": 1,
-                "Price": 70
-            },
-            {
-                "Flat": "D 1208",
-                "Brand": "Aquapure",
-                "Quantity": 2,
-                "Price": 80
-            },
-            {
-                "Flat": "E 1208",
+                "Flat": "A 907",
                 "Brand": "Aquapure",
                 "Quantity": 1,
                 "Price": 40
             },
             {
-                "Flat": "F 1208",
+                "Flat": "A 1004",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "A 1008",
+                "Brand": "Aquapure",
+                "Quantity": 2,
+                "Price": 80
+            },
+            {
+                "Flat": "A 1107",
+                "Brand": "Aquapure",
+                "Quantity": 1,
+                "Price": 40
+            },
+            {
+                "Flat": "A 1204",
                 "Brand": "Aquapure",
                 "Quantity": 2,
                 "Price": 80
@@ -653,9 +813,34 @@
             },
             {
                 "Flat": "A 1208",
-                "Brand": "Hindu",
+                "Brand": "Sakshi",
                 "Quantity": 1,
-                "Price": 10
+                "Price": 7
+            },{
+                "Flat": "A 208",
+                "Brand": "The Hindu",
+                "Quantity": 1,
+                "Price": 9
+            },{
+                "Flat": "A 108",
+                "Brand": "Eenadu",
+                "Quantity": 1,
+                "Price": 6
+            },{
+                "Flat": "A 1201",
+                "Brand": "Sakshi",
+                "Quantity": 1,
+                "Price": 7
+            },{
+                "Flat": "A 405",
+                "Brand": "Andhrajyothi",
+                "Quantity": 1,
+                "Price": 2
+            },{
+                "Flat": "A 128",
+                "Brand": "Sakshi",
+                "Quantity": 1,
+                "Price": 7
             },
             {
                 "Flat": "B 1208",

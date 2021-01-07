@@ -2,6 +2,29 @@
     td{
         padding-left: 70px !important;
     }
+    .p-paginator-left-content {
+      font-weight: bold;
+      color: #ffffff;
+      margin: 5px;
+  }
+    th{
+      .ant-picker {
+        margin-left: 50px;
+        height: 25px;
+        opacity: 0.8;
+        font-size: 12px;
+        width: 150px !important;
+    }
+    .ant-picker-input-placeholder{
+      font-size: 12px;
+    }
+    input {
+      height: 25px;
+  }
+  .ant-picker-input > input:placeholder-shown {
+      font-size: 12px;
+  }
+    }
     .table-header {
         display: flex;
         align-items: center;
@@ -89,11 +112,20 @@
         opacity: 0.9;
         font-size: 13px;
         margin-bottom: 5px;
+          margin-right: 10px;
     }
     .p-field {
         margin: 8px;
+        display: flex;
+    flex-direction: column;
         input{
             height: 30px;
+            font-size: 12px;
         }
+        .ant-picker {
+          height: 29px;
+          border: 1px solid #a6a6a6;
+
+      }
     }
 }

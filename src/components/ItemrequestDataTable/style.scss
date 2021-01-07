@@ -256,3 +256,22 @@ box-shadow: none !important;
       }
     }
   }
+
+  .printablediv {
+    display: none;
+   
+  }
+
+  #printablediv {
+    tr.p-datatable-row.p-datatable-rowspan-group {
+      border: 2px solid !important;
+  }
+  }
+  
+  body > .printablediv {
+    display: block;
+    padding: 10px !important;
+  }
+  .quantitytable{
+    width: 250px !important;
+  }
