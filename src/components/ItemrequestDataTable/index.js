@@ -240,7 +240,6 @@ class ItemrequestDataTable extends Component {
             const data = _.groupBy(requests, "Brand") || [];
             waterstockData.map((_items) => {
                 let firstKey = _items[0];
-                console.log()
                 if (Object.keys(data).indexOf(firstKey) >= 0) {
                     let count = data[firstKey];
                     let _count = 0;

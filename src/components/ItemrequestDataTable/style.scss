@@ -271,7 +271,23 @@ box-shadow: none !important;
   body > .printablediv {
     display: block;
     padding: 10px !important;
+    .printed-row{
+      border: 2px solid red !important;
+    
+    }
   }
   .quantitytable{
     width: 250px !important;
   }
+
+.orders-table{
+  tr{
+    border: 1px solid #525253!important;
+td{
+  padding-left: 45px !important;
+}
+  }
+  tr:nth-child(even) {
+    background-color:#ffffff !important;
+  }
+}

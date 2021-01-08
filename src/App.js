@@ -11,9 +11,11 @@ import WaterRequest from "./components/WaterRequest";
 import MilkRequest from "./components/MilkRequest";
 import FruitRequests from "./components/FruitRequest";
 import _ItemsList from "./components/ProductsList";
+import _BillStatus from "./components/BillStatus/index";
 import Advertisements from "./components/Advertisements";
 import _FlatsActivation from "./components/FlatsDetails";
 import FlatwiseBill from "./components/FlatwiseBill";
+import DayWiseItems from "./components/DayWiseItems";
 import Expenditure from "./components/ExpenditureMain.js";
 import { ChartsDemo } from './components/ChartsDemo';
 import {getAppInitialData} from "./actions/action";
@@ -220,8 +222,10 @@ this.props.dispatch(getAppInitialData());
                     <Route path="/FruitRequests" component={FruitRequests} />
                     <Route path="/FlatwiseBill" component={FlatwiseBill} />
                     <Route path="/Expenditures" component={Expenditure} />
+                    <Route path="/BillStatus" component={_BillStatus} />
+                    <Route path="/DayWiseItems" component={DayWiseItems} />
 
-
+                    
                     
 
 

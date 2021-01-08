@@ -8,6 +8,8 @@ export const getAppInitialData = () => async dispatch => {
    dispatch(getProductsList());
    dispatch(getAdvancedFruitsList());
    dispatch(getexpenditureList());
+   dispatch(getBillStatus());
+
 }
 export const getwaterRequests = () => {
   return (dispatch) => {
@@ -15,6 +17,17 @@ export const getwaterRequests = () => {
       .then(res => {
         dispatch({
           type: 'FETCH_WATER_REQUESTS',
+          payload: res.data
+        });
+      })
+  }
+}
+export const getBillStatus = () => {
+  return (dispatch) => {
+    let res = axios.get('http://localhost:3013/billStatus')
+      .then(res => {
+        dispatch({
+          type: 'FETCH_BILL_STATUS',
           payload: res.data
         });
       })

@@ -1,0 +1,75 @@
+.billstatus{
+    .p-datatable .p-datatable-tfoot > tr > td {
+        
+        color: white !important;
+        background-color: #2a323b !important;
+    }
+    .p-paginator .p-paginator-left-content {
+        float: left;
+        padding: 5px;
+        color: #f6f6f6;
+        font-weight: bold;
+    }
+    td{
+        text-align: left;
+        padding-left: 20px;
+        padding: .3em 1em !important;
+input{
+    height: 22px;
+    width: 75px;
+    border: 1px solid #a6a6a6;
+    font-size: 12px !important;
+}
+.p-row-editor-init.p-link {
+    width: 1.7em !important;
+    height: 1.7em !important;
+    
+    padding: 1px !important;
+    font-size: 13px !important;
+}
+    }
+    .p-datatable-header {
+        .table-header {
+          display: flex;
+          align-items: center;
+          .left_container {
+            display: flex;
+            justify-content: flex-start;
+          
+          }
+          .Right_container {
+            display: flex;
+            justify-content: flex-end;
+            input.p-inputtext.p-component {
+              width: 175px;
+              font-size: 12px;
+              padding: 0.329em;
+            }
+  
+            i.pi.pi-search {
+              position: relative;
+              font-size: 1.15em;
+              right: 1.3em;
+              top: 2px;
+            }
+          }
+        }
+      }
+      tr.p-datatable-row.PaidLess-row {
+        background: #f39100 !important;
+        // color: #ffffff !important;
+
+    }
+  
+    tr.p-datatable-row.Pending-row{
+background: red !important;
+font-weight: 600;
+
+    }
+    tr.p-datatable-row.Paid-row{
+background: green !important;
+font-weight: 600;
+color: #ffffff !important;
+
+    }
+}

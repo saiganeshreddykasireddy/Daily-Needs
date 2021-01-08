@@ -24,7 +24,7 @@ const formItemLayout = {
 
 
 
-const FlatwiseBill = (props) => {
+const DayWiseItems = (props) => {
     const FlatsList = useSelector(state => {
         let { FlatsList  } = state;
         return FlatsList;
@@ -42,17 +42,7 @@ const FlatwiseBill = (props) => {
         }
        
     // },[FlatsList])
-    const options = [
-        {
-            value: 'Burns Bay Road',
-        },
-        {
-            value: 'Downing Street',
-        },
-        {
-            value: 'Wall Street',
-        },
-    ];
+ 
     const onSelect = (value) => {
         setSelectedflat(value);
     }
@@ -68,7 +58,7 @@ const FlatwiseBill = (props) => {
     }
     return (<>
         <Form name="time_related_controls" {...formItemLayout} >
-        <div className="bill-header">Flat Wise Bill</div>
+        <div className="bill-header">Day Wise Items</div>
 <div className ="form-layout"> 
             <div className="formlabel">Flat Number</div>
             <Form.Item
@@ -100,12 +90,12 @@ const FlatwiseBill = (props) => {
                         message: 'Please select start date!',
                     },
                 ]}  >
-                <div className="formlabel"> Month</div>
+                <div className="formlabel"> Select Date</div>
                 <DatePicker style={{
                     width: 200,
                 }}
-                format={'YYYY-MM'}
-                picker="month"
+                format={'DD-MM-YYYY'}
+                // picker="month"
                     // value={selectedstartdate}
                     onChange={onChange}
                 />
@@ -127,7 +117,7 @@ const FlatwiseBill = (props) => {
             </Form.Item> */}
             <Form.Item name="submit">
                 <Button type="primary" htmlType="submit" onClick={onSubmit}>
-                    Generate Bill
+                    Get Details
         </Button>
             </Form.Item>
         </div>
@@ -137,7 +127,7 @@ const FlatwiseBill = (props) => {
     );
 };
 
-export default FlatwiseBill;
+export default DayWiseItems;
 
 
 

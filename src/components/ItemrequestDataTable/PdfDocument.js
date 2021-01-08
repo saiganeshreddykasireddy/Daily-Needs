@@ -4,7 +4,7 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Button } from 'primereact/button';
 import _ from "lodash";
-
+import "./style.scss";
 import ReactToPrint from 'react-to-print';
 import moment from "moment";
 
@@ -23,6 +23,7 @@ class Datatablecontent extends Component {
       isPrint: true,
     });
   }
+ 
   render() {
     let { ItemRequests, globalFilter } = this.props;
     if (globalFilter != null) {
@@ -63,7 +64,7 @@ class Datatablecontent extends Component {
         <div  ref={(el) => (this.componentRef = el)}   >
           <div style={{ display: "flex",justifyContent:"space-between" }}>
         <div style={{ margin: "30px 20px 10px 20px",fontWeight:'bold'}}> Date : {currentdate}</div>
-        <div style={{ margin: "20px 20px 10px 20px",fontWeight:'bold'}}> Block : {globalFilter ? globalFilter.toUpperCase() : "All"} Block</div>
+        <div style={{ margin: "20px 80px 10px 20px",fontWeight:'bold'}}> Block : {globalFilter ? globalFilter.toUpperCase() : "All"} Block</div>
 
         </div>
           <div style={{ display: "flex" }}> 
@@ -76,13 +77,14 @@ class Datatablecontent extends Component {
               rowGroupMode="rowspan"
               groupField="Flat"
               emptyMessage="No Orders Found"
+              className="orders-table"
             >
               <Column field="Flat" header="Flat Num"></Column>
               <Column field="Brand" header="Brand" ></Column>
-              <Column field="Quantity" header="Quantity" ></Column>
+              <Column style={{width:"10em"}} field="Quantity" header="Quantity" ></Column>
             </DataTable>
           </div>
-          <div style={{ margin: "0px 15px 0px 25px" }}>
+          <div style={{ margin: "0px 25px 0px 25px" }}>
             <DataTable ref={(el) => this.dt = el} value={finalData}
               className="quantitytable"
               emptyMessage="No Orders Found"

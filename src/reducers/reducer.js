@@ -7,7 +7,8 @@ const initialState = {
     AdvancedRequests:[],
     FruitRequests:[],
     AdvancedFruitRequests:[],
-    ExpenditureList:[]
+    ExpenditureList:[],
+    billStatus:[]
   }
   
   export default function reducers(state = initialState, action) {
@@ -46,6 +47,11 @@ const initialState = {
         return {
           ...state,
           FlatsList: action.payload
+        };
+        case 'FETCH_BILL_STATUS':
+        return {
+          ...state,
+          billStatus: action.payload
         };
       case 'EDIT_WATER_REQUESTS':
         const udpatedRecords = [];
